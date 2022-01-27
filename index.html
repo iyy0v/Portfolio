@@ -1,21 +1,39 @@
 <!DOCTYPE html>
+<!-- This isn't the final version, alot of this stuff will be deleted as I am just learning for the moment -->
 <html>
     <head>
-        
+        <title>Ayoub's portfolio</title>
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet">
     </head>
     <body>
         <header>
-
+            <nav class="menu">
+                <ol>
+                    <li class="menu_element"><a href="">Home</a></li>
+                    <li class="menu_element"><a href="">About</a></li>
+                    <li class="menu_element"><a href="">Contact</a></li>
+                </ol>
+            </nav>
         </header>
         <main>
-            <center>
-                Hi ! this will soon be my portfolio :)
-            </center>
+            Hi ! this will soon be my portfolio :)
+
+            <form onsubmit="result.value = '\nEmail : ' + email.value + '\nPassword : ' + pwd.value">
+                <input type="email" id="email" name="email" alt="enter email here" /> +
+                <input type="password" id="pwd" name="pwd" alt="enter password here" /> =
+                
+                <input type="submit" id="valid" name="valid" value="connect"/> 
+                
+                <output name="result" for="email pwd"></output>
+            </form>
+            
+                
+            
         </main>
         <footer>
-            <center>
-                <a href="https://github.com/iyy0v">GitHub</a>
-                </center>
+                <a href="https://github.com/iyy0v" class="socials">GitHub</a>
+                <p style="font-size: 14px;">Ayoub 2022</p>
         </footer>
     </body>
 </html>
