@@ -10,9 +10,9 @@
         <header>
             <nav class="menu">
                 <ol>
-                    <li class="menu_element"><a href="">Home</a></li>
-                    <li class="menu_element"><a href="">About</a></li>
-                    <li class="menu_element"><a href="">Contact</a></li>
+                    <li class="menu_element"><a href="" style="color: #d8bfd8">Home</a></li>
+                    <li class="menu_element"><a href="" style="color: #d8bfd8">About</a></li>
+                    <li class="menu_element"><a href="" style="color: #d8bfd8">Contact</a></li>
                 </ol>
             </nav>
         </header>
@@ -25,12 +25,21 @@
                 <input type="password" id="pwd" name="pwd" placeholder="Password" />
                 <br /><br />
             <form>
-                <input type="button" id="valid" name="valid" value="connect" onclick="result.value = '\nEmail : ' + email.value + ' - Password : ' + pwd.value"/> 
+                <input type="button" id="valid" name="valid" value="Connect" onclick="result.value = '\nEmail : ' + email.value + ' - Password : ' + pwd.value"/> 
                 <br /><br />
                 <output name="result" for="email pwd"></output>
             </form>
         </section> 
-            
+        
+        <section class="infos">
+            <form oninput="infos.value = first_name.value + ' ' +last_name.value">
+                <input type="text" id="first_name" name="first name" placeholder="First name"/>
+                <input type="text" id="last_name" name="last name" placeholder="Last name" />
+                <br /><br />
+                <output name="infos" for="first_name last_name"></output>
+            </form>
+        </section>
+
         </main>
         <footer>
                 <a href="https://github.com/iyy0v" class="socials">GitHub</a>
