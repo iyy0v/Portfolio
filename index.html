@@ -19,16 +19,17 @@
         <main>
             Hi ! this will soon be my portfolio :)
 
-            <form onsubmit="result.value = '\nEmail : ' + email.value + '\nPassword : ' + pwd.value">
-                <input type="email" id="email" name="email" alt="enter email here" /> +
-                <input type="password" id="pwd" name="pwd" alt="enter password here" /> =
-                
-                <input type="submit" id="valid" name="valid" value="connect"/> 
-                
+        <section class="login">
+                <input type="email" id="email" name="email" placeholder="Email" /> 
+                <br /><br />
+                <input type="password" id="pwd" name="pwd" placeholder="Password" />
+                <br /><br />
+            <form>
+                <input type="button" id="valid" name="valid" value="connect" onclick="result.value = '\nEmail : ' + email.value + ' - Password : ' + pwd.value"/> 
+                <br /><br />
                 <output name="result" for="email pwd"></output>
             </form>
-            
-                
+        </section> 
             
         </main>
         <footer>
