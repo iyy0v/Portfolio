@@ -19,16 +19,14 @@
         <main>
 
         <div class="login">
-                <input type="email" id="email" name="email" placeholder="Email" style="font-family:monospace;"/> 
-                <br /><br />
+                <input type="email" id="email" name="email" placeholder="Email" style="font-family:monospace;"/> <br />
                 <input type="password" id="pwd" name="pwd" placeholder="Password" style="font-family:monospace;" />
-                <br /><br />
             <form>
-                <input type="button" id="valid" name="valid" value="CONNECT" onclick="result.value = '\nEmail : ' + email.value + ' - Password : ' + pwd.value" style="font-family:monospace; color: #fffbff;background-color: #552455;"/> 
-                <br /><br />
+                <input type="button" id="valid" name="valid" value="CONNECT" onclick="result.value = '\nEmail : ' + email.value + ' - Password : ' + pwd.value" style="font-family:monospace; color: #fffbff;background-color: #552455;"/> <br />
                 <output name="result" for="email pwd"></output>
             </form>
-        </div> 
+        </div>
+        
         <br />
         Welcome !
         <br />
@@ -43,13 +41,23 @@
                 <output name="infos" for="first_name last_name"></output>
             </form>
         </div>
+        
+        <div>
+            <form onmouseover="hasbulla.style = 'height: 500px;'">
+                <img class="hasbulla-pic" id="hasbulla" name="hasbulla"  src="https://lh3.googleusercontent.com/HgQ7TyQjtD_SdRKpttwxyQjGk38tUXG_k5OBF1k95-XjEH8sfg5XLMgyUfwsGIcHJO5nJpgykGb9zjKPWBD8FKHu9HRCg3hFZOrzjco">
+             </form>
+        </div>
+
 
         </main>
         <footer>
-            <div class="foo">
-                <a href="https://github.com/iyy0v" class="socials">GitHub</a>
-                <p style="font-size: 12px; color: #fffbff;">Ayoub 2022</p>
-            </div>
+            <nav class="foo">
+                <ol>
+                    <li class="foo_element"><a href="https://github.com/iyy0v" class="socials">GitHub</a></li>
+                    <li class="foo_element"><a href="https://www.linkedin.com/in/ayoubnaitmihoub/" class="socials">LinkedIn</a></li>
+                </ol>
+                <p>Ayoub 2022</p>
+            </nav>
         </footer>
     </body>
 </html>
