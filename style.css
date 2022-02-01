@@ -49,8 +49,13 @@ input {
     font-size: 26px;
     font-family:monospace;
 }
+.hasbulla {
+    display: inline-flex;
+}
+.hasbulla form {
+    height: 100px;
+}
 .hasbulla-pic {
-    padding: 0;
     height: 100px;
 }
 .foo {
