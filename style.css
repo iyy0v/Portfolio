@@ -7,6 +7,7 @@ body{
 header {
     margin: -8px;
     margin-top: -50px;
+    border-bottom-left-radius: 25px;
     background-color: #552455;
 }
 main{
@@ -26,33 +27,44 @@ input {
 }
 .menu ol {
     list-style-type: none;
-    padding-top: 1%;
-    padding-bottom: 1%;
 }
 .menu_element{
     display:inline-flex;
-    padding-right: 20px;
+    height: 70px;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 .login {
-    position: static;
-    margin-left: 40%;
-    margin-right: 40%;
-    font-size: 15px;
+    display: inline-block;
+    width: 250px;
     padding: 20px;
+    margin-bottom: 80px;
+    border-radius: 25px;
     background-color:#552455;
 }
 .login input{
     margin: 10px;
+    border-style:hidden;
+    border-radius: 10px;
+    font-size: 15px;
 }
 .infos {
+    margin-top: 80px;
     font-size: 26px;
     font-family:monospace;
+}
+.infos input {
+    border-style: solid;
+    border-color: #202020;
+    border-radius: 10px;
 }
 .hasbulla {
     display: inline-flex;
 }
 .hasbulla form {
     height: 100px;
+    margin-top: 40px;
+    margin-bottom: 100px;
 }
 .hasbulla-pic {
     height: 100px;
