@@ -10,9 +10,21 @@
         <header>
             <nav class="menu">
                 <ol>
-                    <li class="menu_element"><a href="" style="color: #fffbff">Home</a></li>
-                    <li class="menu_element"><a href="" style="color: #fffbff">About</a></li>
-                    <li class="menu_element"><a href="" style="color: #fffbff">Contact</a></li>
+                    <li class="menu_element">
+                        <form onmouseover="home.style ='color: #bbbbbb; font-size: 80px;'; about.style='font-size: 30px;color: #fffbff;'; contact.style='font-size: 30px;color: #fffbff;'" onmouseout="home.style ='color: #fffbff;'; about.style ='color: #fffbff;'; contact.style ='color: #fffbff;'">
+                            <a id="home" href="" style="color: #fffbff">Home</a>
+                        </form>
+                    </li>
+                    <li class="menu_element">
+                        <form onmouseover="about.style ='color: #bbbbbb; font-size: 80px;'; home.style='font-size: 30px;color: #fffbff;'; contact.style='font-size: 30px;color: #fffbff;'" onmouseout="home.style ='color: #fffbff;'; about.style ='color: #fffbff;'; contact.style ='color: #fffbff;'">
+                            <a id="about" href="" style="color: #fffbff;">About</a>
+                        </form>
+                    </li>
+                    <li class="menu_element">
+                        <form onmouseover="contact.style ='color: #bbbbbb; font-size: 80px;'; home.style='font-size: 30px;color: #fffbff;'; about.style='font-size: 30px;color: #fffbff;'" onmouseout="home.style ='color: #fffbff;'; about.style ='color: #fffbff;'; contact.style ='color: #fffbff;'">
+                            <a id="contact" href="" style="color: #fffbff">Contact</a>
+                        </form>
+                    </li>
                 </ol>
             </nav>
         </header>
@@ -22,7 +34,9 @@
                 <input type="email" id="email" name="email" placeholder="Email" style="font-family:monospace;"/> <br />
                 <input type="password" id="pwd" name="pwd" placeholder="Password" style="font-family:monospace;" />
             <form>
-                <input type="button" id="valid" name="valid" value="CONNECT" onclick="result.value = '\nEmail : ' + email.value + ' - Password : ' + pwd.value" style="font-family:monospace; color: #fffbff;background-color: #552455;"/> <br />
+                <from onmouseover="connect.style='font-family:monospace; color: #202020; background-color: #bbbbbb;'" onmouseout="connect.style='font-family:monospace; color: #202020; background-color: #fffbff;'">
+                    <input type="button" id="connect" name="connect" value="CONNECT" onclick="result.value = '\nEmail : ' + email.value + ' - Password : ' + pwd.value" style="font-family:monospace; color: #202020; background-color: #fffbff;"/> <br />
+                </form>
                 <output name="result" for="email pwd"></output>
             </form>
         </div>
@@ -31,13 +45,12 @@
         Welcome !
         <br />
         This will soon be my portfolio :)
-        <br /><br />
 
         <div class="infos">
             <form oninput="infos.value = first_name.value + ' ' +last_name.value">
                 <input type="text" id="first_name" name="first name" placeholder="First name"/>
                 <input type="text" id="last_name" name="last name" placeholder="Last name" />
-                <br /><br />
+                <br />
                 <output name="infos" for="first_name last_name"></output>
             </form>
         </div>
