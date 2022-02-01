@@ -2,7 +2,7 @@ body{
     padding-top: 0%;
     font-size: 50px;
     font-family:monospace;
-    background-color: #fffbff;
+    background-image: url("https://blackgold.sa/wp-content/uploads/2018/02/website-background-images-tile-wallpaper-photo.jpg");
 }
 header {
     margin: -8px;
@@ -39,11 +39,10 @@ input {
     margin-right: 40%;
     font-size: 15px;
     padding: 20px;
-    background-color:#202020;
+    background-color:#552455;
 }
 .login input{
     margin: 10px;
-
 }
 .infos {
     font-size: 26px;
