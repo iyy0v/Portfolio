@@ -1,8 +1,8 @@
 body{
     padding-top: 0%;
     font-size: 50px;
-    font-family:monospace;
-    background-image: url("https://blackgold.sa/wp-content/uploads/2018/02/website-background-images-tile-wallpaper-photo.jpg");
+    font-family: monospace;
+    background-image: url(images/background.jpg);
 }
 header {
     margin: -8px;
