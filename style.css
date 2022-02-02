@@ -1,4 +1,5 @@
 body{
+    min-width: 600px;
     padding-top: 0%;
     font-size: 50px;
     font-family: monospace;
@@ -18,6 +19,7 @@ footer{
     text-align: center;
 }
 a {
+    transition-duration: 200ms;
     font-weight: bold;
     text-decoration: none;
 }
@@ -25,7 +27,7 @@ input {
     padding: 8px;
     font-weight: bold;
 }
-.menu ol {
+.menu ul {
     list-style-type: none;
 }
 .menu_element{
@@ -64,10 +66,32 @@ input {
 .hasbulla form {
     height: 100px;
     margin-top: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
 }
 .hasbulla-pic {
+    transition-duration: 200ms;
     height: 100px;
+}
+.projects ul {
+    display: inline-flex;
+    list-style-type: none;
+    margin-bottom: 100px;
+}
+.project {
+    align-items: center;
+    width: 450px;
+    margin: 20px;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border-radius: 30px;
+    background-color: #202020;
+}
+.project h2 {
+    color: #fffbff;
+}
+.project p {
+    color: #fffbff;
 }
 .foo {
     position: fixed;
