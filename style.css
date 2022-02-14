@@ -18,6 +18,9 @@ footer{
     font-size: 25px;
     text-align: center;
 }
+h2 {
+    margin-bottom: 0px;
+}
 a {
     transition-duration: 200ms;
     font-weight: bold;
@@ -50,16 +53,37 @@ input {
     border-radius: 10px;
     font-size: 15px;
 }
-.infos {
-    margin-top: 80px;
+.contact {
+    display: inline-block;
+    width: 500px;
+    margin-top: -10px;
+    padding: 40px;
+    border-radius: 25px;
     font-size: 26px;
     font-family:monospace;
+    margin-bottom: 100px;
+    background-color: #552455;
 }
-.infos input {
+.contact input {
     border-style: solid;
     border-color: #202020;
     border-radius: 10px;
 }
+.contact_email input {
+    width: 390px;
+    margin: 10px;
+}
+.contact_message textarea {
+    width: 400px;
+    margin: 20px;
+    padding: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #202020;
+    border-radius: 10px;
+    resize: none;
+}
+
 .hasbulla {
     display: inline-flex;
 }
@@ -72,16 +96,18 @@ input {
     transition-duration: 200ms;
     height: 100px;
 }
+.projects{
+    display: inline-block;
+}
 .projects ul {
-    display: inline-table;
+    display: inline-block;
     list-style-type: none;
-    margin-bottom: 100px;
-    margin-left: -10px;
+    margin-bottom: 20px;
 }
 .project {
     display: inline-flex;
     width: 450px;
-    margin: 20px;
+    margin: 0px 40px 20px 0px;
     padding: 10px;
     padding-left: 40px;
     padding-right: 40px;
