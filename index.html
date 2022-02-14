@@ -52,7 +52,7 @@
                 <img class="hasbulla-pic" id="hasbulla" name="hasbulla"  src="img/hasbullaNFT.jpg">     
             </form>
         </div>
-
+        <br>
         <section id="projects" class="projects">
             <h2>Projects</h2>
             <ul>
@@ -79,19 +79,22 @@
 
         <h3>Contact me</h3>
         <section id="contact_section" class="contact">
-            <div>
-                <form oninput="infos.value = first_name.value + ' ' +last_name.value">
-                    <input type="text" id="first_name" name="first name" placeholder="First name"/>
-                    <input type="text" id="last_name" name="last name" placeholder="Last name" />
-                    <output name="infos" for="first_name last_name"></output>
-                </form>
-            </div>
-            <div class="contact_email">
-                <input type="email" id="contact_email" name="contact email" placeholder="Email" />
-            </div>
-            <div class="contact_message">
-                <input type="text" id="contact_message" name="contact message" placeholder="Message..." />
-            </div>
+                <div>
+                    <input type="text" id="first_name" name="first name" placeholder=" First name"/>
+                    <input type="text" id="last_name" name="last name" placeholder=" Last name" />
+                </div>
+                <div class="contact_email">
+                    <input type="email" id="contact_email" name="contact email" required placeholder=" Email" />
+                </div>
+                <div class="contact_message">
+                    <textarea id="contact_message" name="contact message" rows="5" cols=40" required placeholder=" Message..."></textarea>
+                </div>
+                <form onclick="contacts.value = 'By: ' + first_name.value + ' ' +last_name.value + ' - Email: ' + contact_email.value + ' - Message: ' + contact_message.value">
+                <div>
+                    <input type="button" id="send" name ="send" value="SEND" style="padding: 10px 20px 10px 20px;">
+                </div>
+                <output name="contacts"></output>
+            </form>
         </section>
 
         </main>
