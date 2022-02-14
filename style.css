@@ -1,5 +1,5 @@
 body{
-    min-width: 600px;
+    min-width: 500px;
     padding-top: 0%;
     font-size: 50px;
     font-family: monospace;
@@ -73,12 +73,13 @@ input {
     height: 100px;
 }
 .projects ul {
-    display: inline-flex;
+    display: inline-table;
     list-style-type: none;
     margin-bottom: 100px;
+    margin-left: -10px;
 }
 .project {
-    align-items: center;
+    display: inline-flex;
     width: 450px;
     margin: 20px;
     padding: 10px;
@@ -87,18 +88,18 @@ input {
     border-radius: 30px;
     background-color: #202020;
 }
-.project h2 {
+.project h2, p {
     color: #fffbff;
 }
-.project p {
-    color: #fffbff;
+footer {
+    margin: 0 -10px -10px -10px ;
 }
 .foo {
-    position: fixed;
+    width: 100%;
     right: 0;
     left: 0;
     bottom: 0;
-    padding-top: 10px;
+    padding: 30px;
     background-color: #202020;
 }
 .foo ol{
