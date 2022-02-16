@@ -31,12 +31,12 @@
         <main>
 
         <div class="login">
-                <input type="email" id="email" name="email" placeholder="Email" style="font-family:monospace;"/> <br />
-                <input type="password" id="pwd" name="pwd" placeholder="Password" style="font-family:monospace;" />
             <form>
+                <input type="email" id="email" name="email" required placeholder="Email" style="font-family:monospace;"/> <br />
+                <input type="password" id="pwd" name="pwd" required placeholder="Password" style="font-family:monospace;" />
                 <from onmouseover="connect.style='font-family:monospace; color: #202020; background-color: #bbbbbb;'" onmouseout="connect.style='font-family:monospace; color: #202020; background-color: #fffbff;'">
-                    <input type="button" id="connect" name="connect" value="CONNECT" onclick="result.value = '\nEmail : ' + email.value + ' - Password : ' + pwd.value" style="font-family:monospace; color: #202020; background-color: #fffbff;"/> <br />
-                </form>
+                    <input type="submit" id="connect" name="connect" value="CONNECT" onclick="result.value = '\nEmail : ' + email.value + ' - Password : ' + pwd.value" style="font-family:monospace; color: #202020; background-color: #fffbff;"/> <br />
+                </from>
                 <output name="result" for="email pwd"></output>
             </form>
         </div>
@@ -44,11 +44,11 @@
         <br>
         Welcome !
         <br>
-        This will soon be my portfolio :)
+        This is just a random portfolio model :)
         <br>
         
         <div class="hasbulla">
-            <form onmouseover="hasbulla.style = 'height: 300px; margin-bottom: 100px;'" onmouseout="hasbulla.style = 'height: 100px;'">
+            <form onmouseover="hasbulla.style = 'height: 300px; margin-bottom: 100px; box-shadow: 0 3px 8px 0 #b37fb3, 0 6px 10px 0 #b37fb3'" onmouseout="hasbulla.style = 'height: 100px;'">
                 <img class="hasbulla-pic" id="hasbulla" name="hasbulla"  src="img/hasbullaNFT.jpg">     
             </form>
         </div>
@@ -69,16 +69,17 @@
                     </div>
                 </li>
                 <li class="project">
-                <div>
-                    <h2>Project3</h2>
-                    <p>Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla</p>
-                </div>
+                    <div>
+                        <h2>Project3</h2>
+                        <p>Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla</p>
+                    </div>
                 </li>
             </ul>
         </section>
 
         <h3>Contact me</h3>
         <section id="contact_section" class="contact">
+            <form>
                 <div>
                     <input type="text" id="first_name" name="first name" placeholder=" First name"/>
                     <input type="text" id="last_name" name="last name" placeholder=" Last name" />
@@ -89,11 +90,10 @@
                 <div class="contact_message">
                     <textarea id="contact_message" name="contact message" rows="5" cols=40" required placeholder=" Message..."></textarea>
                 </div>
-                <form onclick="contacts.value = 'By: ' + first_name.value + ' ' +last_name.value + ' - Email: ' + contact_email.value + ' - Message: ' + contact_message.value">
                 <div>
-                    <input type="button" id="send" name ="send" value="SEND" style="padding: 10px 20px 10px 20px;">
+                    <input type="submit" id="send" name ="send" value="SEND" style="padding: 10px 20px 10px 20px;" onclick="contacts.value = 'By: ' + first_name.value + ' ' +last_name.value + ' - Email: ' + contact_email.value + ' - Message: ' + contact_message.value" onmouseover="send.style='padding: 10px 20px 10px 20px; color: #202020; background-color: #bbbbbb;'" onmouseout="send.style='padding: 10px 20px 10px 20px; color: #202020; background-color: #fffbff;'"> <br>
+                    <output name="contacts"></output>
                 </div>
-                <output name="contacts"></output>
             </form>
         </section>
 
