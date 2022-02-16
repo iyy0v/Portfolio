@@ -3,13 +3,14 @@ body{
     padding-top: 0%;
     font-size: 50px;
     font-family: monospace;
-    background-image: url(images/background.jpg);
+    background-color: rgb(224, 224, 224);
 }
 header {
     margin: -8px;
     margin-top: -50px;
     border-bottom-left-radius: 25px;
     background-color: #552455;
+    box-shadow: 0 2px 6px 0 #b37fb3;
 }
 main{
     text-align: center;
@@ -46,6 +47,7 @@ input {
     margin-bottom: 80px;
     border-radius: 25px;
     background-color:#552455;
+    box-shadow: 0 4px 8px 0 #b37fb3, 0 8px 12px 0 #b37fb3;
 }
 .login input{
     margin: 10px;
@@ -63,6 +65,7 @@ input {
     font-family:monospace;
     margin-bottom: 100px;
     background-color: #552455;
+    box-shadow: 0 4px 8px 0 #b37fb3, 0 8px 12px 0 #b37fb3;
 }
 .contact input {
     border-style: solid;
@@ -95,6 +98,7 @@ input {
 .hasbulla-pic {
     transition-duration: 200ms;
     height: 100px;
+    box-shadow: 0 1px 2px 0 #b37fb3, 0 1px 3px 0 #b37fb3
 }
 .projects{
     display: inline-block;
@@ -112,6 +116,7 @@ input {
     padding-left: 40px;
     padding-right: 40px;
     border-radius: 30px;
+    box-shadow: 2px 9px 20px 7px grey, 0 6px 20px 0 grey;
     background-color: #202020;
 }
 .project h2, p {

@@ -34,8 +34,8 @@
             <form>
                 <input type="email" id="email" name="email" required placeholder="Email" style="font-family:monospace;"/> <br />
                 <input type="password" id="pwd" name="pwd" required placeholder="Password" style="font-family:monospace;" />
-                <from onmouseover="connect.style='font-family:monospace; color: #202020; background-color: #bbbbbb;'" onmouseout="connect.style='font-family:monospace; color: #202020; background-color: #fffbff;'">
-                    <input type="submit" id="connect" name="connect" value="CONNECT" onclick="result.value = '\nEmail : ' + email.value + ' - Password : ' + pwd.value" style="font-family:monospace; color: #202020; background-color: #fffbff;"/> <br />
+                <from onmouseover="connect.style='color: #202020; background-color: #bbbbbb;'" onmouseout="connect.style='color: #202020; background-color: #fffbff;'">
+                    <input type="submit" id="connect" name="connect" value="CONNECT" onclick="result.value = '\nEmail : ' + email.value + ' - Password : ' + pwd.value" style="color: #202020; background-color: #fffbff;"/> <br />
                 </from>
                 <output name="result" for="email pwd"></output>
             </form>
@@ -91,7 +91,7 @@
                     <textarea id="contact_message" name="contact message" rows="5" cols=40" required placeholder=" Message..."></textarea>
                 </div>
                 <div>
-                    <input type="submit" id="send" name ="send" value="SEND" style="padding: 10px 20px 10px 20px;" onclick="contacts.value = 'By: ' + first_name.value + ' ' +last_name.value + ' - Email: ' + contact_email.value + ' - Message: ' + contact_message.value" onmouseover="send.style='padding: 10px 20px 10px 20px; color: #202020; background-color: #bbbbbb;'" onmouseout="send.style='padding: 10px 20px 10px 20px; color: #202020; background-color: #fffbff;'"> <br>
+                    <input type="submit" id="send" name ="send" value="SEND" style="padding: 10px 20px 10px 20px; font-size: 15px;" onclick="contacts.value = 'By: ' + first_name.value + ' ' +last_name.value + ' - Email: ' + contact_email.value + ' - Message: ' + contact_message.value" onmouseover="send.style='padding: 10px 20px 10px 20px; color: #202020; background-color: #bbbbbb;  font-size: 15px;'" onmouseout="send.style='padding: 10px 20px 10px 20px; color: #202020; background-color: #fffbff;  font-size: 15px;'"> <br>
                     <output name="contacts"></output>
                 </div>
             </form>
