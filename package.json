@@ -1,15 +1,19 @@
 {
-  "name": "v2.0",
+  "name": "portfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iyy0v/Portfolio.git"
+  },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "sass": "^1.49.9"
-  }
+  "bugs": {
+    "url": "https://github.com/iyy0v/Portfolio/issues"
+  },
+  "homepage": "https://github.com/iyy0v/Portfolio#readme"
 }
