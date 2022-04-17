@@ -2,6 +2,7 @@ p, a {
   font-size: 1em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 600;
+  text-decoration: none;
 }
 
 #unit {
@@ -27,9 +28,6 @@ p, a {
   flex-direction: row;
   justify-content: space-between;
 }
-#controls a {
-  text-decoration: none;
-}
 
 a:link {
   color: black;
@@ -45,4 +43,11 @@ a:hover {
 
 a:active {
   color: orange;
+}
+
+#nodes, #window, #location, #navigator, #popup {
+  text-align: center;
+}
+#nodes *, #window *, #location *, #navigator *, #popup * {
+  margin: 2em;
 }/*# sourceMappingURL=style.css.map */
