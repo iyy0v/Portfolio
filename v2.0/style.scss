@@ -4,6 +4,7 @@ p,a {
         family: Verdana, Geneva, Tahoma, sans-serif;
         weight: 600;
     }
+    text-decoration: none;
 }
 #unit {
     position: relative;
@@ -26,11 +27,6 @@ p,a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    a {
-        text-decoration: none;
-    } 
-    
-    
 }
 a:link {
     color: black;
@@ -44,4 +40,12 @@ a:hover {
 a:active {
     color: orange;
 }
+#nodes, #window, #location, #navigator, #popup {
+    text-align: center;
+    * {
+        margin: 2em;
+    }
+}
+
+
 
