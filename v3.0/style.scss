@@ -4,5 +4,11 @@ $teritary: #00D1CD;
 $alternatif: #444444;
 
 body {
+    font-family: 'Nunito', sans-serif;
     background-color: $primary;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
 }
