@@ -2,7 +2,7 @@ let logo = document.getElementById("logo");
 let logoText = document.getElementById("logo").getElementsByTagName("button")[0].getElementsByTagName("p")[0];
 let mode = document.getElementById("switch");
 let modeText = document.getElementById("mode");
-
+let pfp = document.getElementById("pfp");
 
 
 let logoState = 0;
@@ -47,3 +47,10 @@ mode.onclick = function() {
         currentMode = 1;
     }
 };
+
+pfp.onclick = function() {
+    pfp.src = "./img/pepohi.gif";
+    setTimeout(function(){
+        pfp.src = "./img/pepohi-pre.jpg";
+    }, 2100);
+}

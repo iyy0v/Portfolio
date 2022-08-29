@@ -12,7 +12,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3%;
+  padding: 0.5rem 3%;
 }
 
 #logo button {
@@ -82,7 +82,20 @@ header {
 }
 
 main {
-  margin-top: 4rem;
+  background-color: lightgrey;
+  width: 80%;
+  min-width: 420px;
+  margin: 4.1rem auto;
   display: flex;
   flex-direction: column;
+}
+main #intro {
+  border: 3px red solid;
+  height: 92vh;
+}
+main #intro #pfp {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
