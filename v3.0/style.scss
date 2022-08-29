@@ -8,29 +8,37 @@ body {
     background-color: $primary;
 }
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 95%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 3%;
 }
 #logo {
     button {
-        width: 4rem;
+        width: 3.5rem;
         border: 0;
         p {
             font-family: 'Roboto Condensed', sans-serif;
             font-size: 3em;
             font-weight: 700;
             margin: 0;
+
+            background: -webkit-linear-gradient(90deg,#9747ff,#ff75f1,#9747ff);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
-            transition: background 3s linear;
-            animation: glow;
-            animation-duration: 3s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-            animation-direction: alternate;
+            transition: background 1s linear;
+
+            background-size: 15px 40px;  
+            border-radius: 10px; 
+            
+            animation: glow 2s linear infinite;
+            
         }
     }
     button:hover {
@@ -40,12 +48,15 @@ header {
     }
 }
 @keyframes glow {
-	0% {
-		background: -webkit-linear-gradient(90deg,#9747ff,#ff75f1);
-	}
+    0% {
+        background-position: 0px 0px; 
+    }
+    50% {
+        background-position: 20px 20px; 
+    }
     100% {
-		background: -webkit-linear-gradient(90deg,#ff75f1,#9747ff);
-	}
+        background-position: 40px 40px; 
+    }
 }
 
 #switch {
@@ -69,6 +80,7 @@ header {
 .md-60 { font-size: 35px !important; }
 
 main {
+    margin-top: 4rem;
     display: flex;
     flex-direction: column;
 }

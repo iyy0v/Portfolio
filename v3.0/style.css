@@ -4,15 +4,19 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1rem 3%;
 }
 
 #logo button {
-  width: 4rem;
+  width: 3.5rem;
   border: 0;
 }
 #logo button p {
@@ -20,19 +24,15 @@ header {
   font-size: 3em;
   font-weight: 700;
   margin: 0;
+  background: -webkit-linear-gradient(90deg, #9747ff, #ff75f1, #9747ff);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: background 3s linear;
-  -webkit-animation: glow;
-          animation: glow;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+  transition: background 1s linear;
+  background-size: 15px 40px;
+  border-radius: 10px;
+  -webkit-animation: glow 2s linear infinite;
+          animation: glow 2s linear infinite;
 }
 #logo button:hover {
   cursor: pointer;
@@ -42,19 +42,25 @@ header {
 
 @-webkit-keyframes glow {
   0% {
-    background: -webkit-linear-gradient(90deg, #9747ff, #ff75f1);
+    background-position: 0px 0px;
+  }
+  50% {
+    background-position: 20px 20px;
   }
   100% {
-    background: -webkit-linear-gradient(90deg, #ff75f1, #9747ff);
+    background-position: 40px 40px;
   }
 }
 
 @keyframes glow {
   0% {
-    background: -webkit-linear-gradient(90deg, #9747ff, #ff75f1);
+    background-position: 0px 0px;
+  }
+  50% {
+    background-position: 20px 20px;
   }
   100% {
-    background: -webkit-linear-gradient(90deg, #ff75f1, #9747ff);
+    background-position: 40px 40px;
   }
 }
 #switch button {
@@ -76,6 +82,7 @@ header {
 }
 
 main {
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
 }/*# sourceMappingURL=style.css.map */

@@ -18,15 +18,18 @@ logo.onclick = function() {
             logoText.innerText = "<|";
             break;
         case 3:
-            logoText.innerText = "<:";
+            logoText.innerText = "<I";
             break;
         case 4:
-            logoText.innerText = "(:";
+            logoText.innerText = "<:";
             break;
         case 5:
-            logoText.style.transform += "rotate(-90deg)";
+            logoText.innerText = "(:";
             break;
         case 6:
+            logoText.style.transform += "rotate(-90deg)";
+            break;
+        case 7:
             logoText.style.transform = "";
             logoText.innerText = "</>";
             logoState = 0;
