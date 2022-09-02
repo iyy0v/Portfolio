@@ -6,6 +6,7 @@ let pfp = document.getElementById("pfp");
 let intro = document.getElementById("intro");
 let arrow = document.getElementById("scroll");
 
+
 let logoState = 0;
 let currentMode = 1;
 
@@ -41,10 +42,28 @@ logo.onclick = function() {
 mode.onclick = function() {
     if(currentMode) {
         modeText.innerText = "dark_mode";
+        document.getElementsByTagName("body")[0].style.backgroundColor = "#111111";
+        document.getElementById("logoBtn").style.backgroundColor = "#111111";
+        document.getElementById("switchBtn").style.backgroundColor = "#111111";
+        document.getElementById("mode").style.color = "#FFFFFF";
+        document.getElementsByClassName("welcome")[1].style.color = "#FFFFFF";
+        document.getElementById("description").style.color = "#CCCCCC";
+        document.getElementById("scroll").style.color = "#EAEAEA";
+        document.getElementsByClassName("arrow")[0].style.fill = "#EAEAEA";
+
         currentMode = 0;
     }
     else {
         modeText.innerText = "light_mode";
+        document.getElementsByTagName("body")[0].style.backgroundColor = "#EAEAEA";
+        document.getElementById("logoBtn").style.backgroundColor = "#EAEAEA";
+        document.getElementById("switchBtn").style.backgroundColor = "#EAEAEA";
+        document.getElementById("mode").style.color = "#000000";
+        document.getElementsByClassName("welcome")[1].style.color = "#000000";
+        document.getElementById("description").style.color = "#333333";
+        document.getElementById("scroll").style.color = "#333333";
+        document.getElementsByClassName("arrow")[0].style.fill = "#333333";
+
         currentMode = 1;
     }
 };
@@ -58,9 +77,9 @@ pfp.onclick = function() {
 
 window.onscroll = () => {
     if(window.scrollY === 0) {
-        arrow.style = "opacity: 1;";
+        arrow.style.opacity = "1";
     }
     else if(window.scrollY > 200){
-        arrow.style = "opacity: 0;";
+        arrow.style.opacity= "0";
     }
 }

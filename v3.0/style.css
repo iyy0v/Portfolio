@@ -1,10 +1,57 @@
+.lightBG {
+  background-color: #EAEAEA;
+}
+
+.lightBG:hover {
+  background-color: #EAEAEA;
+}
+
+.darkBG {
+  background-color: #222222;
+}
+
+.darkBG:hover {
+  background-color: #222222;
+}
+
+.whiteBG {
+  background-color: #FFFFFF;
+}
+
+.whiteBG:hover {
+  background-color: #FFFFFF;
+}
+
+.blackBG {
+  background-color: #000000;
+}
+
+.blackBG:hover {
+  background-color: #000000;
+}
+
+.lightColor {
+  color: #EAEAEA;
+}
+
+.darkColor {
+  color: #222222;
+}
+
+.whiteColor {
+  color: #FFFFFF;
+}
+
+.blackColor {
+  color: #000000;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Nunito", sans-serif;
-  background-color: #EAEAEA;
   margin: 0;
 }
 
@@ -42,7 +89,6 @@ header {
 }
 #logo button:hover {
   cursor: pointer;
-  background-color: #EAEAEA;
   outline: 0;
 }
 
@@ -75,7 +121,6 @@ header {
 }
 #switch button:hover {
   cursor: pointer;
-  background-color: #EAEAEA;
   outline: 0;
 }
 
@@ -99,7 +144,6 @@ main #intro {
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  border: 3px red solid;
   height: 99vh;
   min-height: 500px;
 }
@@ -129,7 +173,6 @@ main #intro #introContent #welcome .colored {
   color: #F30067;
 }
 main #intro P {
-  color: #333333;
   font-size: 2em;
   text-align: justify;
   margin: 2rem auto;
@@ -137,7 +180,6 @@ main #intro P {
   width: 95%;
 }
 main #intro #scroll {
-  color: #333333;
   position: absolute;
   top: 95%;
   left: 50%;
@@ -158,6 +200,9 @@ main #intro #scroll svg .arrow {
   fill: #333333;
   -webkit-animation: scroll 0.35s ease-in alternate infinite;
           animation: scroll 0.35s ease-in alternate infinite;
+}
+main #skills {
+  border: 3px red solid;
 }
 
 @-webkit-keyframes scroll {
