@@ -3,7 +3,8 @@ let logoText = document.getElementById("logo").getElementsByTagName("button")[0]
 let mode = document.getElementById("switch");
 let modeText = document.getElementById("mode");
 let pfp = document.getElementById("pfp");
-
+let intro = document.getElementById("intro");
+let arrow = document.getElementById("scroll");
 
 let logoState = 0;
 let currentMode = 1;
@@ -53,4 +54,13 @@ pfp.onclick = function() {
     setTimeout(function(){
         pfp.src = "./img/pepohi-pre.jpg";
     }, 2100);
+}
+
+window.onscroll = () => {
+    if(window.scrollY === 0) {
+        arrow.style = "opacity: 1;";
+    }
+    else if(window.scrollY > 200){
+        arrow.style = "opacity: 0;";
+    }
 }

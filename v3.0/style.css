@@ -1,6 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Nunito", sans-serif;
   background-color: #EAEAEA;
+  margin: 0;
 }
 
 header {
@@ -13,6 +18,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 3%;
+  z-index: 10;
 }
 
 #logo button {
@@ -82,20 +88,92 @@ header {
 }
 
 main {
-  background-color: lightgrey;
   width: 80%;
   min-width: 420px;
-  margin: 4.1rem auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 main #intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
   border: 3px red solid;
-  height: 92vh;
+  height: 99vh;
+  min-height: 500px;
 }
-main #intro #pfp {
+main #intro #introContent {
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+main #intro #introContent #pfp {
+  grid-area: img;
   width: 200px;
   height: auto;
   border-radius: 5px;
+  margin-right: 3rem;
   cursor: pointer;
+}
+main #intro #introContent #welcome .welcome {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 5em;
+  font-weight: bold;
+  margin: 0;
+}
+main #intro #introContent #welcome .colored {
+  color: #F30067;
+}
+main #intro P {
+  color: #333333;
+  font-size: 2em;
+  text-align: justify;
+  margin: 2rem auto;
+  max-width: 1050px;
+  width: 95%;
+}
+main #intro #scroll {
+  color: #333333;
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  font-family: "Nunito", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  transform: translate(-50%, -50%);
+  transition: opacity 1s ease-out;
+}
+main #intro #scroll svg {
+  width: 14px;
+  display: block;
+  margin: 10px auto;
+}
+main #intro #scroll svg .arrow {
+  fill: #333333;
+  -webkit-animation: scroll 0.35s ease-in alternate infinite;
+          animation: scroll 0.35s ease-in alternate infinite;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
 }/*# sourceMappingURL=style.css.map */
