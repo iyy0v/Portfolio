@@ -205,6 +205,82 @@ main #skills {
   border: 3px red solid;
 }
 
+footer {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer #contacts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  width: 400px;
+  margin: 4rem 0;
+}
+footer #contacts a {
+  text-decoration: none;
+  font-size: 35px;
+  margin: 0 2rem;
+}
+footer #contacts span {
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s ease-out;
+  background-color: black;
+}
+footer #contacts span img {
+  width: 40px;
+  height: 40px;
+}
+footer #contacts #fb {
+  -webkit-mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/facebook.svg) no-repeat center;
+  mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/facebook.svg) no-repeat center;
+  -webkit-mask-size: 40px;
+          mask-size: 40px;
+}
+footer #contacts #twitter {
+  -webkit-mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/twitter.svg) no-repeat center;
+  mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/twitter.svg) no-repeat center;
+  -webkit-mask-size: 40px;
+          mask-size: 40px;
+}
+footer #contacts #discord {
+  -webkit-mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/discord.svg) no-repeat center;
+  mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/discord.svg) no-repeat center;
+  -webkit-mask-size: 40px;
+          mask-size: 40px;
+}
+footer #contacts #linkedin {
+  -webkit-mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/linkedin.svg) no-repeat center;
+  mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/linkedin.svg) no-repeat center;
+  -webkit-mask-size: 40px;
+          mask-size: 40px;
+}
+footer #contacts #github {
+  -webkit-mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/github.svg) no-repeat center;
+  mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/github.svg) no-repeat center;
+  -webkit-mask-size: 40px;
+          mask-size: 40px;
+}
+footer #email {
+  font-size: 1em;
+  transition: background-color 0.3s ease-out;
+}
+footer a:link, footer a:visited, footer a:hover {
+  color: black;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+footer a:hover {
+  -webkit-text-decoration-color: #9747ff;
+          text-decoration-color: #9747ff;
+}
+
 @-webkit-keyframes scroll {
   0% {
     transform: translateY(0);

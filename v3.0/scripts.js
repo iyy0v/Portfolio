@@ -6,9 +6,16 @@ let pfp = document.getElementById("pfp");
 let intro = document.getElementById("intro");
 let arrow = document.getElementById("scroll");
 
-
+let fb = document.getElementById("fb");
+let github = document.getElementById("github");
+let twitter = document.getElementById("twitter");
+let linkedin = document.getElementById("linkedin");
+let discord = document.getElementById("discord");
+let spans = document.getElementById("contacts").getElementsByTagName("span");
 let logoState = 0;
 let currentMode = 1;
+let oldColor = "black";
+
 
 logo.onclick = function() {
     logoState++;
@@ -51,6 +58,12 @@ mode.onclick = function() {
         document.getElementById("scroll").style.color = "#EAEAEA";
         document.getElementsByClassName("arrow")[0].style.fill = "#EAEAEA";
 
+        
+        for(let i = 0; i < 5; i++) {
+            spans[i].style.backgroundColor = "#EAEAEA";
+        }
+        document.getElementById("email").style.color = "#EAEAEA";
+        oldColor = "white";
         currentMode = 0;
     }
     else {
@@ -64,6 +77,11 @@ mode.onclick = function() {
         document.getElementById("scroll").style.color = "#333333";
         document.getElementsByClassName("arrow")[0].style.fill = "#333333";
 
+        for(let i = 0; i < 5; i++) {
+            spans[i].style.backgroundColor = "#000000";
+        }
+        document.getElementById("email").style.color = "#000000";
+        oldColor = "black";
         currentMode = 1;
     }
 };
@@ -83,3 +101,38 @@ window.onscroll = () => {
         arrow.style.opacity= "0";
     }
 }
+
+
+
+
+fb.onmouseover = function() {
+    fb.style.backgroundColor = "#1877F2";
+}
+fb.onmouseleave = function() {
+    fb.style.backgroundColor = oldColor;
+} 
+github.onmouseover = function() {
+    github.style.backgroundColor = "#322F2F";
+}
+github.onmouseleave = function() {
+    github.style.backgroundColor = oldColor;
+} 
+twitter.onmouseover = function() {
+   twitter.style.backgroundColor = "#00ACEE"; 
+}
+twitter.onmouseleave = function() {
+    twitter.style.backgroundColor = oldColor;
+} 
+linkedin.onmouseover = function() {
+    linkedin.style.backgroundColor = "#0077B5";
+}
+linkedin.onmouseleave = function() {
+    linkedin.style.backgroundColor = oldColor;
+} 
+discord.onmouseover = function() {
+    console.log(oldColor);
+    discord.style.backgroundColor = "#5865F2";
+}
+discord.onmouseleave = function() {
+    discord.style.backgroundColor = oldColor;
+} 

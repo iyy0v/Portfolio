@@ -171,7 +171,74 @@ main {
     }
 }
 
-
+footer {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    #contacts {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-around;
+        width: 400px;
+        margin: 4rem 0;
+        a {
+            text-decoration: none;
+            font-size: 35px;
+            margin: 0 2rem;
+        }
+        span {
+            width: 40px;
+            height: 40px;
+            transition: background-color 0.3s ease-out;
+            background-color: black;
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        #fb {
+            -webkit-mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/facebook.svg) no-repeat center;
+            mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/facebook.svg) no-repeat center;
+            mask-size: 40px;
+        }
+        #twitter {
+            -webkit-mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/twitter.svg) no-repeat center;
+            mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/twitter.svg) no-repeat center; 
+            mask-size: 40px;
+        }
+        #discord {
+            -webkit-mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/discord.svg) no-repeat center;
+            mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/discord.svg) no-repeat center; 
+            mask-size: 40px;
+        }
+        #linkedin {
+            -webkit-mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/linkedin.svg) no-repeat center;
+            mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/linkedin.svg) no-repeat center; 
+            mask-size: 40px;
+        }
+        #github {
+            -webkit-mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/github.svg) no-repeat center;
+            mask: url(https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/github.svg) no-repeat center; 
+            mask-size: 40px;
+        }
+    }
+    #email {
+        font-size: 1em;
+        transition: background-color 0.3s ease-out;
+    }
+    a:link, a:visited, a:hover {
+        color: black;
+        text-decoration:underline;
+        text-decoration-style: dotted;
+    }
+    a:hover {
+        text-decoration-color: #9747ff;
+    }
+}
 
 
 
