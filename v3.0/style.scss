@@ -169,11 +169,33 @@ main {
     }
 
     #tech {
-        border: 3px red solid;
+        height: 99vh;
+        color: black;
         h1 {
             font-size: 4em;
             text-align: center;
         }
+        #skills {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            h2 {
+                font-size: 2.5em;
+            }
+            li {
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-left: 2em;
+                margin-bottom: 1em;
+            }
+            .sep {
+                width: 1px;
+                height: 650px;
+                background-color: grey;
+                margin: 1rem 0;
+            }
+        }
+
     }
     #projects {
         

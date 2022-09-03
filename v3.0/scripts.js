@@ -15,7 +15,6 @@ let spans = document.getElementById("contacts").getElementsByTagName("span");
 let logoState = 0;
 let currentMode = 1;
 let oldColor = "black";
-let y1 = 0, y2 = 0;
 
 
 logo.onclick = function() {
@@ -58,6 +57,7 @@ mode.onclick = function() {
         document.getElementById("description").style.color = "#CCCCCC";
         document.getElementById("scroll").style.color = "#EAEAEA";
         document.getElementsByClassName("arrow")[0].style.fill = "#EAEAEA";
+        document.getElementById("tech").style.color = "#EAEAEA";
 
         
         for(let i = 0; i < 5; i++) {
@@ -77,6 +77,7 @@ mode.onclick = function() {
         document.getElementById("description").style.color = "#333333";
         document.getElementById("scroll").style.color = "#333333";
         document.getElementsByClassName("arrow")[0].style.fill = "#333333";
+        document.getElementById("tech").style.color = "#000000";
 
         for(let i = 0; i < 5; i++) {
             spans[i].style.backgroundColor = "#000000";
@@ -114,14 +115,14 @@ window.onscroll = () => {
     else if(window.scrollY > 200){
         arrow.style.opacity= "0";
     }
-    /*     -------------- if auto-scroll is off-----------------
     if(window.scrollY < window.innerHeight) {
         document.title = "iyy0v | Home";
     }
     else if(window.scrollY >= window.innerHeight) {
         document.title = "iyy0v | Skills";
     }
-    */
+    /*      -------------- AUTO SCROLL ------------------
+    let y1 = 0, y2 = 0;
     y2 = y1;
     y1 = window.scrollY;
     if(document.title === "iyy0v | Home" && y1 > y2) {
@@ -132,6 +133,7 @@ window.onscroll = () => {
         window.location.hash = "intro";
         document.title = "iyy0v | Home";
     }
+    */
 }
 
 

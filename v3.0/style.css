@@ -205,11 +205,32 @@ main #intro #scroll svg .arrow {
           animation: scroll 0.35s ease-in alternate infinite;
 }
 main #tech {
-  border: 3px red solid;
+  height: 99vh;
+  color: black;
 }
 main #tech h1 {
   font-size: 4em;
   text-align: center;
+}
+main #tech #skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+main #tech #skills h2 {
+  font-size: 2.5em;
+}
+main #tech #skills li {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+main #tech #skills .sep {
+  width: 1px;
+  height: 650px;
+  background-color: grey;
+  margin: 1rem 0;
 }
 main #projects {
   border: 3px red solid;
