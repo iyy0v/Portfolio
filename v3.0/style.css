@@ -119,6 +119,9 @@ header {
   width: 3rem;
   border: 0;
 }
+#switch button #mode {
+  transition: color 0.3s ease-out;
+}
 #switch button:hover {
   cursor: pointer;
   outline: 0;
@@ -201,7 +204,14 @@ main #intro #scroll svg .arrow {
   -webkit-animation: scroll 0.35s ease-in alternate infinite;
           animation: scroll 0.35s ease-in alternate infinite;
 }
-main #skills {
+main #tech {
+  border: 3px red solid;
+}
+main #tech h1 {
+  font-size: 4em;
+  text-align: center;
+}
+main #projects {
   border: 3px red solid;
 }
 

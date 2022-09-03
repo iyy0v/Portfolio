@@ -15,6 +15,7 @@ let spans = document.getElementById("contacts").getElementsByTagName("span");
 let logoState = 0;
 let currentMode = 1;
 let oldColor = "black";
+let y1 = 0, y2 = 0;
 
 
 logo.onclick = function() {
@@ -85,6 +86,18 @@ mode.onclick = function() {
         currentMode = 1;
     }
 };
+mode.onmouseover = function() {
+    if(currentMode){
+        document.getElementById("mode").style.color = "#EAE200";
+    }
+    else {
+        document.getElementById("mode").style.color = "#0095B7";
+    }
+}
+mode.onmouseleave = function() {
+    document.getElementById("mode").style.color = oldColor;
+} 
+
 
 pfp.onclick = function() {
     pfp.src = "./img/pepohi.gif";
@@ -94,14 +107,32 @@ pfp.onclick = function() {
 }
 
 window.onscroll = () => {
+    
     if(window.scrollY === 0) {
         arrow.style.opacity = "1";
     }
     else if(window.scrollY > 200){
         arrow.style.opacity= "0";
     }
+    /*     -------------- if auto-scroll is off-----------------
+    if(window.scrollY < window.innerHeight) {
+        document.title = "iyy0v | Home";
+    }
+    else if(window.scrollY >= window.innerHeight) {
+        document.title = "iyy0v | Skills";
+    }
+    */
+    y2 = y1;
+    y1 = window.scrollY;
+    if(document.title === "iyy0v | Home" && y1 > y2) {
+        window.location.hash = "tech";
+        document.title = "iyy0v | Skills";
+    }
+    else if(document.title === "iyy0v | Skills" && y1 < y2) {
+        window.location.hash = "intro";
+        document.title = "iyy0v | Home";
+    }
 }
-
 
 
 
