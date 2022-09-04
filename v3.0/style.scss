@@ -112,7 +112,7 @@ main {
         justify-content: center;
         align-content: center;
         height: 99vh;
-        min-height: 500px;
+        min-height: 1000px;
         #introContent {
             display: flex;
             width: fit-content;
@@ -167,14 +167,14 @@ main {
             }
         }
     }
-
+    .title {
+        font-size: 4em;
+        text-align: center;
+        letter-spacing: 4px;
+    }
     #tech {
         height: 99vh;
         color: black;
-        h1 {
-            font-size: 4em;
-            text-align: center;
-        }
         #skills {
             display: flex;
             flex-direction: row;
@@ -198,8 +198,39 @@ main {
 
     }
     #projects {
-        
-        border: 3px red solid;
+        min-height: 99vh;
+        color: black;
+        .projects {
+            display: flex;
+            flex-direction: column;
+            .project {
+                background-color: #222222;
+                color: #EAEAEA;
+                width: 50%;
+                height: 280px;
+                padding: 2rem;
+                margin: 1rem;
+                border-radius: 5px;
+                display: grid;
+                grid-template: "desc img";
+                align-content: center;
+                .desc {
+                    margin-right: 1rem;
+                }
+                .pImg {
+                    img{
+                        width: 320px;
+                        height: 240px;
+                    }
+                }
+            }
+            .left {
+                align-self: start;
+            }
+            .right {
+                align-self: end;
+            }
+        }
     }
 }
 

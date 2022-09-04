@@ -148,7 +148,7 @@ main #intro {
   justify-content: center;
   align-content: center;
   height: 99vh;
-  min-height: 500px;
+  min-height: 1000px;
 }
 main #intro #introContent {
   display: flex;
@@ -204,13 +204,14 @@ main #intro #scroll svg .arrow {
   -webkit-animation: scroll 0.35s ease-in alternate infinite;
           animation: scroll 0.35s ease-in alternate infinite;
 }
+main .title {
+  font-size: 4em;
+  text-align: center;
+  letter-spacing: 4px;
+}
 main #tech {
   height: 99vh;
   color: black;
-}
-main #tech h1 {
-  font-size: 4em;
-  text-align: center;
 }
 main #tech #skills {
   display: flex;
@@ -233,7 +234,37 @@ main #tech #skills .sep {
   margin: 1rem 0;
 }
 main #projects {
-  border: 3px red solid;
+  min-height: 99vh;
+  color: black;
+}
+main #projects .projects {
+  display: flex;
+  flex-direction: column;
+}
+main #projects .projects .project {
+  background-color: #222222;
+  color: #EAEAEA;
+  width: 50%;
+  height: 280px;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 5px;
+  display: grid;
+  grid-template: "desc img";
+  align-content: center;
+}
+main #projects .projects .project .desc {
+  margin-right: 1rem;
+}
+main #projects .projects .project .pImg img {
+  width: 320px;
+  height: 240px;
+}
+main #projects .projects .left {
+  align-self: start;
+}
+main #projects .projects .right {
+  align-self: end;
 }
 
 footer {
