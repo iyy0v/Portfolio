@@ -12,6 +12,7 @@ let twitter = document.getElementById("twitter");
 let linkedin = document.getElementById("linkedin");
 let discord = document.getElementById("discord");
 let spans = document.getElementById("contacts").getElementsByTagName("span");
+let projects = document.getElementsByClassName("project");
 let logoState = 0;
 let currentMode = 1;
 let oldColor = "black";
@@ -58,8 +59,15 @@ mode.onclick = function() {
         document.getElementById("scroll").style.color = "#EAEAEA";
         document.getElementsByClassName("arrow")[0].style.fill = "#EAEAEA";
         document.getElementById("tech").style.color = "#EAEAEA";
-
-        
+        document.getElementById("projects").style.color = "#EAEAEA";
+        for(let i = 0; i < 4; i++) {
+            projects[i].style.backgroundColor = "#EAEAEA";
+            projects[i].style.color = "#000000";
+            projects[i].getElementsByClassName("desc")[0].style.color = "#000000";
+            projects[i].getElementsByClassName("separ")[0].style.backgroundColor = "#000000";
+            projects[i].getElementsByClassName("work")[0].style.color = "#333333";
+            projects[i].getElementsByClassName("work")[1].style.color = "#333333";
+        }
         for(let i = 0; i < 5; i++) {
             spans[i].style.backgroundColor = "#EAEAEA";
         }
@@ -78,7 +86,15 @@ mode.onclick = function() {
         document.getElementById("scroll").style.color = "#333333";
         document.getElementsByClassName("arrow")[0].style.fill = "#333333";
         document.getElementById("tech").style.color = "#000000";
-
+        document.getElementById("projects").style.color = "#000000";
+        for(let i = 0; i < 4; i++) {
+            projects[i].style.backgroundColor = "#222222";
+            projects[i].style.color = "#EAEAEA";
+            projects[i].getElementsByClassName("desc")[0].style.color = "#FFFFFF";
+            projects[i].getElementsByClassName("separ")[0].style.backgroundColor = "#EAEAEA";
+            projects[i].getElementsByClassName("work")[0].style.color = "#CCCCCC";
+            projects[i].getElementsByClassName("work")[1].style.color = "#CCCCCC";
+        }
         for(let i = 0; i < 5; i++) {
             spans[i].style.backgroundColor = "#000000";
         }
