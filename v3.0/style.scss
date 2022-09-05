@@ -174,6 +174,7 @@ main {
     }
     #tech {
         height: 99vh;
+        min-height: 900px;
         color: black;
         #skills {
             display: flex;
@@ -198,7 +199,7 @@ main {
 
     }
     #projects {
-        min-height: 99vh;
+        height: fit-content;
         color: black;
         .projects {
             display: flex;
@@ -207,20 +208,40 @@ main {
                 background-color: #222222;
                 color: #EAEAEA;
                 width: 50%;
-                height: 280px;
+                min-width: 360px;
+                height: 270px;
                 padding: 2rem;
-                margin: 1rem;
+                margin-bottom: 2rem;
                 border-radius: 5px;
-                display: grid;
-                grid-template: "desc img";
+                display: flex;
+                flex-direction: row;
                 align-content: center;
-                .desc {
+                .pInfo {
                     margin-right: 1rem;
+                    h2 {
+                        font-size: 1.8em;
+                    }
+                    .desc {
+                        color: #FFFFFF;
+                    }
+                    .separ {
+                        height: 1px;
+                        width: 60%;
+                        min-width: 300px;
+                        background-color: #EAEAEA;
+                    }
+                    .work {
+                        color: #CCCCCC;
+                    }
                 }
                 .pImg {
-                    img{
-                        width: 320px;
-                        height: 240px;
+                    min-width: 360px;
+                    max-width: 360px;
+                    max-height: 270px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 3px;
                     }
                 }
             }
