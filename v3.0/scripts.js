@@ -131,11 +131,14 @@ window.onscroll = () => {
     else if(window.scrollY > 200){
         arrow.style.opacity= "0";
     }
-    if(window.scrollY < window.innerHeight - 300) {
+    if(window.scrollY < 700) {
         document.title = "iyy0v | About me";
     }
-    else if(window.scrollY >= window.innerHeight - 300) {
+    else if(window.scrollY >= 700 && window.scrollY < 1520) {
         document.title = "iyy0v | Skills";
+    }
+    else if(window.scrollY >= 1520) {
+        document.title = "iyy0v | Projects";
     }
     /*      -------------- AUTO SCROLL ------------------
     let y1 = 0, y2 = 0;

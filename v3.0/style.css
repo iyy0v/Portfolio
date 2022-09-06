@@ -69,7 +69,8 @@ header {
 }
 
 #logo button {
-  width: 3.5rem;
+  width: 3.8rem;
+  background-color: transparent;
   border: 0;
 }
 #logo button p {
@@ -117,6 +118,7 @@ header {
 }
 #switch button {
   width: 3rem;
+  background-color: transparent;
   border: 0;
 }
 #switch button #mode {
@@ -148,7 +150,7 @@ main #intro {
   justify-content: center;
   align-content: center;
   height: 99vh;
-  min-height: 1000px;
+  min-height: 600px;
 }
 main #intro #introContent {
   display: flex;
@@ -248,7 +250,9 @@ main #projects .projects .project {
   background-color: #222222;
   color: #EAEAEA;
   width: 50%;
-  min-width: 360px;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
   height: 270px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -256,12 +260,14 @@ main #projects .projects .project {
   display: flex;
   flex-direction: row;
   align-content: center;
+  justify-content: center;
 }
 main #projects .projects .project .pInfo {
   margin-right: 1rem;
 }
 main #projects .projects .project .pInfo h2 {
   font-size: 1.8em;
+  margin-top: 1rem;
 }
 main #projects .projects .project .pInfo .desc {
   color: #FFFFFF;
@@ -276,9 +282,10 @@ main #projects .projects .project .pInfo .work {
   color: #CCCCCC;
 }
 main #projects .projects .project .pImg {
-  min-width: 360px;
-  max-width: 360px;
-  max-height: 270px;
+  min-width: 320px;
+  max-width: 320px;
+  max-height: 240px;
+  margin-top: 0.9rem;
 }
 main #projects .projects .project .pImg img {
   width: 100%;
@@ -383,5 +390,48 @@ footer a:hover {
   }
   100% {
     transform: translateY(10px);
+  }
+}
+@media (max-width: 874px) {
+  #intro {
+    min-height: -webkit-max-content;
+    min-height: -moz-max-content;
+    min-height: max-content;
+    margin: 4rem 0;
+  }
+  #tech {
+    height: -webkit-max-content !important;
+    height: -moz-max-content !important;
+    height: max-content !important;
+  }
+  #tech #skills {
+    flex-direction: column !important;
+  }
+  #tech #skills .sep {
+    height: 0px !important;
+    width: 0px !important;
+  }
+  #projects {
+    display: block;
+    position: relative;
+  }
+  #projects .project {
+    width: 70% !important;
+    min-width: -webkit-min-content !important;
+    min-width: -moz-min-content !important;
+    min-width: min-content !important;
+    height: -webkit-max-content !important;
+    height: -moz-max-content !important;
+    height: max-content !important;
+    flex-direction: column !important;
+  }
+  #projects .project .pInfo .separ {
+    width: 100% !important;
+  }
+  #projects .project .pImg {
+    margin: 0.9rem auto;
+  }
+  #projects .left, #projects .right {
+    align-self: center !important;
   }
 }/*# sourceMappingURL=style.css.map */
