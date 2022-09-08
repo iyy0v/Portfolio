@@ -6,6 +6,7 @@ let pfp = document.getElementById("pfp");
 let intro = document.getElementById("intro");
 let arrow = document.getElementById("scroll");
 
+
 let fb = document.getElementById("fb");
 let github = document.getElementById("github");
 let twitter = document.getElementById("twitter");
@@ -67,6 +68,7 @@ mode.onclick = function() {
             projects[i].getElementsByClassName("separ")[0].style.backgroundColor = "#000000";
             projects[i].getElementsByClassName("work")[0].style.color = "#333333";
             projects[i].getElementsByClassName("work")[1].style.color = "#333333";
+            projects[i].getElementsByClassName("pImg")[0].style.boxShadow = "0 0 2px 2px lightgrey";
         }
         for(let i = 0; i < 5; i++) {
             spans[i].style.backgroundColor = "#EAEAEA";
@@ -94,6 +96,7 @@ mode.onclick = function() {
             projects[i].getElementsByClassName("separ")[0].style.backgroundColor = "#EAEAEA";
             projects[i].getElementsByClassName("work")[0].style.color = "#CCCCCC";
             projects[i].getElementsByClassName("work")[1].style.color = "#CCCCCC";
+            projects[i].getElementsByClassName("pImg")[0].style.boxShadow = "none";
         }
         for(let i = 0; i < 5; i++) {
             spans[i].style.backgroundColor = "#000000";
@@ -122,6 +125,7 @@ pfp.onclick = function() {
         pfp.src = "./img/pepohi-pre.jpg";
     }, 2100);
 }
+
 
 window.onscroll = () => {
     
