@@ -335,6 +335,16 @@ main #projects .projects .project {
 main #projects .projects .project .pInfo {
   margin-right: 1rem;
 }
+main #projects .projects .project .pInfo a:link, main #projects .projects .project .pInfo a:visited, main #projects .projects .project .pInfo a:hover {
+  color: #EAEAEA;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+main #projects .projects .project .pInfo a:hover {
+  -webkit-text-decoration-color: #9747ff;
+          text-decoration-color: #9747ff;
+}
 main #projects .projects .project .pInfo h2 {
   font-size: 1.8em;
   margin-top: 1rem;

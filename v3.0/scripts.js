@@ -61,9 +61,10 @@ mode.onclick = function() {
         document.getElementsByClassName("arrow")[0].style.fill = "#EAEAEA";
         document.getElementById("tech").style.color = "#EAEAEA";
         document.getElementById("projects").style.color = "#EAEAEA";
-        for(let i = 0; i < 4; i++) {
+        for(let i = 0; i < 1; i++) {
             projects[i].style.backgroundColor = "#EAEAEA";
             projects[i].style.color = "#000000";
+            projects[i].getElementsByTagName("a")[0].style.color = "#000000";
             projects[i].getElementsByClassName("desc")[0].style.color = "#000000";
             projects[i].getElementsByClassName("separ")[0].style.backgroundColor = "#000000";
             projects[i].getElementsByClassName("work")[0].style.color = "#333333";
@@ -89,9 +90,10 @@ mode.onclick = function() {
         document.getElementsByClassName("arrow")[0].style.fill = "#333333";
         document.getElementById("tech").style.color = "#000000";
         document.getElementById("projects").style.color = "#000000";
-        for(let i = 0; i < 4; i++) {
+        for(let i = 0; i < 1; i++) {
             projects[i].style.backgroundColor = "#222222";
             projects[i].style.color = "#EAEAEA";
+            projects[i].getElementsByTagName("a")[0].style.color = "#FFFFFF";
             projects[i].getElementsByClassName("desc")[0].style.color = "#FFFFFF";
             projects[i].getElementsByClassName("separ")[0].style.backgroundColor = "#EAEAEA";
             projects[i].getElementsByClassName("work")[0].style.color = "#CCCCCC";
@@ -160,7 +162,6 @@ window.onscroll = () => {
 }
 
 
-
 fb.onmouseover = function() {
     fb.style.backgroundColor = "#1877F2";
 }
@@ -186,7 +187,6 @@ linkedin.onmouseleave = function() {
     linkedin.style.backgroundColor = oldColor;
 } 
 discord.onmouseover = function() {
-    console.log(oldColor);
     discord.style.backgroundColor = "#5865F2";
 }
 discord.onmouseleave = function() {
