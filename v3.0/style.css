@@ -363,6 +363,7 @@ main #projects .projects .project .pInfo .work {
 main #projects .projects .project .pImg {
   max-height: 260px;
   max-width: 360px;
+  min-width: 360px;
   margin-top: 0.5rem;
   overflow: hidden;
   border-radius: 3px;
