@@ -1,7 +1,7 @@
 let logo = document.getElementById("logo");
 let logoText = document.getElementById("logo").getElementsByTagName("button")[0].getElementsByTagName("p")[0];
 let mode = document.getElementById("switch");
-let modeText = document.getElementById("mode");
+let modeImg = document.getElementById("mode");
 let intro = document.getElementById("intro");
 let arrow = document.getElementById("scroll");
 
@@ -15,7 +15,6 @@ let spans = document.getElementById("contacts").getElementsByTagName("span");
 let projects = document.getElementsByClassName("project");
 let logoState = 0;
 let currentMode = 1;
-let oldColor = "black";
 
 
 logo.onclick = function() {
@@ -49,11 +48,11 @@ logo.onclick = function() {
 
 mode.onclick = function() {
     if(currentMode) {
-        modeText.innerText = "dark_mode";
+        modeImg.src = "./img/dark_mode.svg";
+        mode.className = "darkSwitch";
         document.getElementsByTagName("body")[0].style.backgroundColor = "#111111";
         document.getElementById("glow").style.opacity = "1";
         document.getElementById("glow").style.transition = "opacity 1s linear";
-        document.getElementById("mode").style.color = "#FFFFFF";
         document.getElementsByClassName("welcome")[1].style.color = "#FFFFFF";
         document.getElementById("description").style.color = "#CCCCCC";
         document.getElementById("scroll").style.color = "#EAEAEA";
@@ -74,15 +73,14 @@ mode.onclick = function() {
             spans[i].style.backgroundColor = "#EAEAEA";
         }
         document.getElementById("email").style.color = "#EAEAEA";
-        oldColor = "white";
         currentMode = 0;
     }
     else {
-        modeText.innerText = "light_mode";
+        modeImg.src = "./img/light_mode.svg";
+        mode.className = "lightSwitch";
         document.getElementsByTagName("body")[0].style.backgroundColor = "#EAEAEA";
         document.getElementById("glow").style.opacity = "0";
         document.getElementById("glow").style.transition = "opacity 0.5s linear";
-        document.getElementById("mode").style.color = "#000000";
         document.getElementsByClassName("welcome")[1].style.color = "#000000";
         document.getElementById("description").style.color = "#333333";
         document.getElementById("scroll").style.color = "#333333";
@@ -103,21 +101,9 @@ mode.onclick = function() {
             spans[i].style.backgroundColor = "#000000";
         }
         document.getElementById("email").style.color = "#000000";
-        oldColor = "black";
         currentMode = 1;
     }
 };
-mode.onmouseover = function() {
-    if(currentMode){
-        document.getElementById("mode").style.color = "#EAE200";
-    }
-    else {
-        document.getElementById("mode").style.color = "#0095B7";
-    }
-}
-mode.onmouseleave = function() {
-    document.getElementById("mode").style.color = oldColor;
-} 
 
 
 window.onscroll = () => {

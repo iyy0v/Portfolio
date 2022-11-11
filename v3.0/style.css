@@ -121,20 +121,26 @@ header {
   background-color: transparent;
   border: 0;
 }
-#switch button #mode {
-  transition: color 0.3s ease-out;
+#switch button img {
+  transition: filter 0.3s ease-out;
 }
 #switch button:hover {
   cursor: pointer;
   outline: 0;
 }
 
-.material-symbols-outlined {
-  font-variation-settings: "FILL" 0, "wght" 450, "GRAD" 0, "opsz" 0;
+.lightSwitch button img {
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(-56deg) brightness(97%) contrast(103%) !important;
+}
+.lightSwitch button:hover img {
+  filter: invert(84%) sepia(32%) saturate(1359%) hue-rotate(6deg) brightness(101%) contrast(100%) !important;
 }
 
-.md-60 {
-  font-size: 35px !important;
+.darkSwitch button img {
+  filter: invert(94%) sepia(100%) saturate(2%) hue-rotate(158deg) brightness(107%) contrast(101%) !important;
+}
+.darkSwitch button:hover img {
+  filter: invert(38%) sepia(73%) saturate(3071%) hue-rotate(166deg) brightness(95%) contrast(102%) !important;
 }
 
 #glow {
