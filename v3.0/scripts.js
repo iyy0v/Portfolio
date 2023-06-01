@@ -48,7 +48,7 @@ logo.onclick = function() {
 
 mode.onclick = function() {
     if(currentMode) {
-        modeImg.src = "./img/dark_mode.svg";
+        modeImg.src = "./img/light_mode.svg";
         mode.className = "darkSwitch";
         document.getElementsByTagName("body")[0].style.backgroundColor = "#111111";
         document.getElementById("glow").style.opacity = "1";
@@ -76,7 +76,7 @@ mode.onclick = function() {
         currentMode = 0;
     }
     else {
-        modeImg.src = "./img/light_mode.svg";
+        modeImg.src = "./img/dark_mode.svg";
         mode.className = "lightSwitch";
         document.getElementsByTagName("body")[0].style.backgroundColor = "#EAEAEA";
         document.getElementById("glow").style.opacity = "0";

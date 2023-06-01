@@ -130,17 +130,17 @@ header {
 }
 
 .lightSwitch button img {
-  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(-56deg) brightness(97%) contrast(103%) !important;
+  filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(-56deg) brightness(50%) contrast(103%) !important;
 }
 .lightSwitch button:hover img {
-  filter: invert(84%) sepia(32%) saturate(1359%) hue-rotate(6deg) brightness(101%) contrast(100%) !important;
+  filter: none !important;
 }
 
 .darkSwitch button img {
-  filter: invert(94%) sepia(100%) saturate(2%) hue-rotate(158deg) brightness(107%) contrast(101%) !important;
+  filter: invert(94%) sepia(100%) saturate(0%) hue-rotate(158deg) brightness(360%) contrast(100%) !important;
 }
 .darkSwitch button:hover img {
-  filter: invert(38%) sepia(73%) saturate(3071%) hue-rotate(166deg) brightness(95%) contrast(102%) !important;
+  filter: none !important;
 }
 
 #glow {
