@@ -15,6 +15,7 @@ let spans = document.getElementById("contacts").getElementsByTagName("span");
 let projects = document.getElementsByClassName("project");
 let logoState = 0;
 let currentMode = 1;
+let oldColor = "#222222";
 
 
 logo.onclick = function() {
@@ -73,6 +74,7 @@ mode.onclick = function() {
             spans[i].style.backgroundColor = "#EAEAEA";
         }
         document.getElementById("email").style.color = "#EAEAEA";
+        oldColor = "#EAEAEA";
         currentMode = 0;
     }
     else {
@@ -101,6 +103,7 @@ mode.onclick = function() {
             spans[i].style.backgroundColor = "#000000";
         }
         document.getElementById("email").style.color = "#000000";
+        oldColor = "#222222";
         currentMode = 1;
     }
 };
