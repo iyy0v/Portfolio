@@ -6,15 +6,15 @@ import { Link } from 'react-scroll'
 
 export default function NavBar() {
     const links = [
-        "Home",
+        "About",
         "Education",
         "Projects",
         "Skills",
         "Contact"
     ]
 
-    const bg = useColorModeValue("gray.50", "gray.900");
-    const color = useColorModeValue("gray.900", "gray.50");
+    const bg = useColorModeValue("gray.50", "#030310");
+    const color = useColorModeValue("#030310", "gray.50");
 
     return (
         <Container
@@ -29,6 +29,7 @@ export default function NavBar() {
         p={4}
         bgColor={bg}
         textColor={color}
+        zIndex={1000}
         >
             <Flex 
             mx="auto" 

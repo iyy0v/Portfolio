@@ -1,0 +1,20 @@
+- Mobile nav bar
+- Mode switcher
+- Background animation?
+
+About :
+- CVs next to each job title
+- Responsiveness (Text + Cursor)
+
+Education :
+- Timeline/Roadmap ?
+
+Projects/Experience :
+- Fixed scroll from aceternity
+
+
+Skills :
+- Sliders
+
+Contact :
+-
