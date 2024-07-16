@@ -1,11 +1,15 @@
 'use client';
-import { Box, Container, useColorModeValue, Text, Grid, Image, Flex } from "@chakra-ui/react";
+import { Box, Container, useColorModeValue, Text, Grid, Image, Flex, Heading } from "@chakra-ui/react";
 import Head from "next/head";
 import NavBar from "../components/NavBar";
 import { TypewriterEffect, TypewriterEffectSmooth } from "@/components/TypewriterEffect";
 import { TextGenerateEffect } from "@/components/TextGenerateEffect";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CardContainer, CardBody, CardItem } from "@/components/3D-Card";
+import { Meteors } from "@/components/Meteors";
+import { TracingBeam } from "@/components/TracingBeam";
+import { FollowerPointerCard, FollowPointer } from "@/components/FollowingPointer";
+import { GlareCard } from "@/components/GlareCard";
 
 export default function Home() {
   const [showDesc, setShowDesc] = useState(false);
@@ -15,15 +19,15 @@ export default function Home() {
   const name = [
     {
       text: "I'm",
-      className: "text-4xl md:text-6xl",
+      className: "text-3xl md:text-4xl lg:text-6xl",
     },
     {
       text: "Ayoub NAIT MIHOUB",
-      className: "text-blue-500 dark:text-blue-500 text-4xl md:text-6xl",
+      className: "text-blue-500 dark:text-blue-500 text-3xl md:text-4xl lg:text-6xl",
     },
     {
       text: ",",
-      className: "text-4xl md:text-6xl",
+      className: "text-3xl md:text-4xl lg:text-6xl",
     }
   ];
 
@@ -55,6 +59,16 @@ export default function Home() {
     }, 1000);
   }
 
+  useEffect(() => {
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    }
+
+    window.onload = function () {
+      window.scrollTo(0, 0);
+    }
+  },[])
+
   return (
     <Box as="main" bgColor={bg} textColor={color}>
       <Head>
@@ -62,7 +76,7 @@ export default function Home() {
         <meta name="description" content="Ayoub's portfolio" />  
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
+      <Meteors number={40} />
       <NavBar />
 
       <Container 
@@ -76,7 +90,7 @@ export default function Home() {
         w="100%"
         h="auto"
         minH="100vh"
-        pt={16}
+        py={24}
         display="flex"
         flexDirection="column"
         justifyContent="center"
@@ -84,26 +98,25 @@ export default function Home() {
         gap={10}
         overflow="visible"
         >
+
           <Grid 
           templateColumns={{
             base: "1fr",
             xl: "1fr 3fr"
           }}
           alignItems={{
-            base: "center",
-            sm:"start"
+            base: "start",
           }}
           justifyItems={{
-            base: "center",
-            sm:"start"
+            base: "start",
           }}
           gap={{
             base: 5,
             xl:10
           }}
           >
-            <CardContainer className="w-fit">
-              <CardBody className="bg-blue-500 rounded-md w-80 h-80">
+            <CardContainer className="w-fit ">
+              <CardBody className="bg-blue-500 rounded-md w-60 h-60 lg:w-80 lg:h-80 group/card dark:hover:shadow-2xl dark:hover:shadow-indigo -500/[0.4]">
                 <CardItem translateZ="100" >
                   <Image src="./me.png" alt="Ayoub NAIT MIHOUB" rounded={10} width={320}/>
                 </CardItem>
@@ -111,35 +124,126 @@ export default function Home() {
             </CardContainer>
             
             <Flex flexDirection="column">
-              <TypewriterEffectSmooth words={[{text: "Hi there !", className: "text-6xl md:text-8xl"}]} duration={1} cursorDuration={1} cursorClassName="h-12 md:h-24 xl:h-24"/>
-              <TypewriterEffectSmooth words={name} delay={3} duration={2} cursorDuration={3} cursorClassName="h-12 md:h-16 xl:h-16"/>
-              <TypewriterEffectSmooth words={title} delay={6} duration={3} onDone={toggleDesc}/>
+              <TypewriterEffectSmooth words={[{text: "Hi there !", className: "text-5xl md:text-6xl lg:text-8xl"}]} duration={1} cursorDuration={1} cursorClassName="h-14 sm:h-18 lg:h-24 xl:h-24"/>
+              <TypewriterEffectSmooth words={name} delay={3} duration={2} cursorDuration={3} cursorClassName="h-10 sm:h-10 lg:h-16 xl:h-16"/>
+              <TypewriterEffectSmooth words={title} delay={6} duration={3} onDone={toggleDesc} cursorClassName="h-8 sm:h-10 lg:h-14 xl:h-14"/>
             </Flex>
           </Grid>
+          
+          {showDesc ? <TextGenerateEffect words={description} duration={1} delay={0.05} className="w-[452px] sm:w-[562px] md:w-[674px] lg:w-[894px] xl:w-full" />  : <div className="h-32"></div>}
 
-          {showDesc && <TextGenerateEffect words={description} duration={1} delay={0.05} className="w-[894px] xl:w-full" />}
-          
-          
         </Container>
 
         <Container 
         id="Education"
-        bgColor='blue' 
-        minW='100%' 
-        height={2000} 
-        pt={16}
+        bg="red"
+        h="auto"
+        minH="100vh"
+        px={0}
+        py={28}
+        display="flex"
+        flexDirection="column"
+        justifyContent="start"
+        alignItems="center"
+        gap={10}
+        className="w-[390px] sm:w-[480px] md:w-[674px] lg:w-[894px] xl:w-full min-w-[390px] sm:min-w-[480px] md:min-w-[674px] lg:min-w-[894px] xl:min-w-full"
         >
-          Education
-        </Container>
+          <Heading as="h1" className="text-7xl font-bold w-full ml-8 sm:ml-0">
+            Education
+          </Heading>
 
-        <Container 
-        id="Projects"
-        bgColor='purple' 
-        minW='100%' 
-        height={2000} 
-        pt={16}
-        >
-          Projects
+          <Flex 
+          direction="column" 
+          justify="center" 
+          align="center" 
+          gap={{
+            base: 10,
+            md: 28
+          }} 
+          w="100%" 
+          flexGrow={1}
+          >
+            <GlareCard>
+              <Grid
+              templateColumns={{
+                base: "1fr",
+                md: "1fr 4fr"
+              }}
+              templateRows={{
+                base: "1fr 2fr",
+                md: "1fr"
+              }}
+              justifyItems="center"
+              alignItems="center"
+              gap={{
+                base: 2,
+                sm: 6
+              }}
+              p={8}
+              >
+                <Image src="./usthb.png" alt="USTHB" width={100}/>
+                <Flex 
+                direction="column" 
+                justify={{
+                  base: "center",
+                  md: "space-between"
+                }}
+                gap={2}
+                >
+                  <Text className="text-sm md:text-md italic text-gray-400">
+                    Sep 2022 - Jun 2024
+                  </Text>
+                  <Text as="h2" className="text-2xl md:text-3xl font-bold">
+                    Master of Science in <span className="text-blue-500">Software Engineering</span>
+                  </Text>
+                  <Text className="text-md md:text-xl text-gray-400">
+                    University of Science and Technology - Houari Boumediene
+                  </Text>
+                </Flex>
+              </Grid>
+            </GlareCard>
+
+            <GlareCard className="w-full">
+              <Grid
+              templateColumns={{
+                base: "1fr",
+                md: "1fr 4fr"
+              }}
+              templateRows={{
+                base: "1fr 2fr",
+                md: "1fr"
+              }}
+              justifyItems="center"
+              alignItems="center"
+              gap={{
+                base: 2,
+                sm: 6
+              }}
+              p={8}
+              >
+                <Image src="./usthb.png" alt="USTHB" width={100}/>
+                <Flex 
+                direction="column" 
+                justify={{
+                  base: "center",
+                  md: "space-between"
+                }}
+                gap={2}
+                >
+                  <Text className="text-sm md:text-md italic text-gray-400">
+                    Sep 2019 - Jun 2022
+                  </Text>
+                  <Text as="h2" className="text-2xl md:text-3xl font-bold">
+                    Bachelor of Science in <span className="text-blue-500">Computer Science</span>
+                  </Text>
+                  <Text className="text-md md:text-xl text-gray-400">
+                    University of Science and Technology - Houari Boumediene
+                  </Text>
+                </Flex>
+              </Grid>
+            </GlareCard>
+          </Flex>
+
         </Container>
 
         <Container 
@@ -149,17 +253,34 @@ export default function Home() {
         height={2000} 
         pt={16}
         >
-          Skills
+          <Heading as="h1" className="text-7xl font-bold w-full">
+            Skills
+          </Heading>
         </Container>
 
         <Container 
-        id="Contact"
+        id="Experience"
         bgColor='cyan' 
         minW='100%' 
         height={2000} 
         pt={16}
         >
-          Contact
+          <Heading as="h1" className="text-7xl font-bold w-full">
+            Experience
+          </Heading>
+        </Container>
+
+        <Container 
+        id="Projects"
+        bgColor='purple' 
+        minW='100%' 
+        height={2000} 
+        pt={16}
+        >
+          <Heading as="h1" className="text-7xl font-bold w-full">
+            Projects
+          </Heading>
+          
         </Container>
       </Container>
     </Box>

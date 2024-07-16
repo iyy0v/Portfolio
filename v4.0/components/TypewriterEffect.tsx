@@ -149,7 +149,7 @@ export const TypewriterEffectSmooth = ({
   };
 
   return (
-    <div className={cn("flex space-x-1 my-3 xl:my-4", className)}>
+    <div className={cn("flex space-x-1 my-1 lg:my-3 xl:my-4", className)}>
       <AnimatePresence>
         <motion.div
           className="overflow-hidden pb-2"
@@ -177,7 +177,7 @@ export const TypewriterEffectSmooth = ({
           }}
         >
           <div
-            className="text-3xl md:text-5xl font-bold"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
             style={{
               whiteSpace: "nowrap",
             }}
@@ -209,7 +209,7 @@ export const TypewriterEffectSmooth = ({
             },
           }}
           className={cn(
-            "block rounded-sm w-[4px] h-4 sm:h-6 xl:h-12 bg-blue-500",
+            "block rounded-sm w-[4px] h-4 sm:h-10 lg:h-12 bg-blue-500",
             cursorClassName
           )}
         ></motion.span>

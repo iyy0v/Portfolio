@@ -4,6 +4,7 @@ import { Providers } from "../lib/provider";
 import { fonts } from "../lib/fonts";
 import { ColorModeScript } from "@chakra-ui/react";
 import theme from "../lib/theme";
+import { useEffect } from "react";
 export const metadata: Metadata = {
   title: "MyPortfolio",
   description: "Ayoub's portfolio",

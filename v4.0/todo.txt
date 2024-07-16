@@ -3,11 +3,11 @@
 - Background animation?
 
 About :
-- CVs next to each job title
-- Responsiveness (Text + Cursor)
+- CVs ?
+- Responsiveness
 
 Education :
-- Timeline/Roadmap ?
+*DONE*
 
 Projects/Experience :
 - Fixed scroll from aceternity
