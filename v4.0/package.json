@@ -22,7 +22,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-scroll": "^1.9.0",
-    "tailwind-merge": "^2.4.0"
+    "tailwind-merge": "^2.4.0",
+    "tailwindCSS": "npm:tailwindcss@^3.4.6"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -34,7 +35,7 @@
     "eslint-config-next": "14.2.5",
     "postcss": "^8.4.39",
     "prettier": "^3.3.2",
-    "tailwindcss": "^3.4.4",
+    "tailwindcss": "^3.4.6",
     "typescript": "^5"
   }
 }

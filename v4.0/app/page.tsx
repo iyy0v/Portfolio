@@ -10,6 +10,7 @@ import { Meteors } from "@/components/Meteors";
 import { TracingBeam } from "@/components/TracingBeam";
 import { FollowerPointerCard, FollowPointer } from "@/components/FollowingPointer";
 import { GlareCard } from "@/components/GlareCard";
+import { MovingCards } from "@/components/MovingCards";
 
 export default function Home() {
   const [showDesc, setShowDesc] = useState(false);
@@ -52,6 +53,120 @@ export default function Home() {
   ];
 
   const description = "Passionate about creating innovative and efficient software solutions, I specialize in web development and software engineering with a focus on modern technologies and user-friendly designs.";
+
+  const skills = [
+    [
+      {
+        url: "./html.svg",
+        name: "HTML",
+      },
+      {
+        url: "./css.svg",
+        name: "CSS",
+      },
+      {
+        url: "./javascript.svg",
+        name: "JavaScript",
+      },
+      {
+        url: "./typescript.svg",
+        name: "TypeScript",
+      },
+      {
+        url: "./python.svg",
+        name: "python",
+      },
+      {
+        url: "./java.svg",
+        name: "Java",
+      },
+      {
+        url: "./c.svg",
+        name: "C",
+      },
+      {
+        url: "./php.svg",
+        name: "PHP",
+      },
+    ],
+    [
+      {
+        url: "./tailwindcss.svg",
+        name: "TailwindCSS",
+      },
+      {
+        url: "./sass.svg",
+        name: "Sass",
+      },
+      {
+        url: "./React.svg",
+        name: "React",
+      },
+      {
+        url: "./nextjs.svg",
+        name: "NextJS",
+      },
+      {
+        url: "./redux.svg",
+        name: "Redux",
+      },
+      {
+        url: "/reactQuery.png",
+        name: "React Query",
+      },
+      {
+        url: "./bootstrap.svg",
+        name: "Bootstrap",
+      },
+      {
+        url: "./mui.svg",
+        name: "MaterialUI",
+      },
+      
+      {
+        url: "./keystonejs.svg",
+        name: "KeystoneJS",
+      },
+      {
+        url: "./django.svg",
+        name: "Django",
+      },
+    ],
+    [
+      {
+        url: "./nodejs.svg",
+        name: "NodeJS",
+      },
+      {
+        url: "./git.svg",
+        name: "Git",
+      },
+      {
+        url: "./graphql.svg",
+        name: "GraphQL",
+      },
+      {
+        url: "./mysql.svg",
+        name: "MySQL",
+      },
+      {
+        url: "./postgresql.svg",
+        name: "PostgreSQL",
+      },
+      {
+        url: "./oracle.svg",
+        name: "Oracle",
+      },
+      {
+        url: "./figma.svg",
+        name: "Figma"
+      },
+      {
+        url: "./bash.svg",
+        name: "Bash"
+      }
+    ]
+  ]
 
   const toggleDesc = () => {
     setTimeout(() => {
@@ -136,11 +251,13 @@ export default function Home() {
 
         <Container 
         id="Education"
-        bg="red"
         h="auto"
         minH="100vh"
         px={0}
-        py={28}
+        py={{
+          base: 10,
+          md: 28
+        }}
         display="flex"
         flexDirection="column"
         justifyContent="start"
@@ -248,14 +365,39 @@ export default function Home() {
 
         <Container 
         id="Skills"
-        bgColor='green' 
-        minW='100%' 
-        height={2000} 
-        pt={16}
+        h="auto"
+        minH="100vh"
+        px={0}
+        py={{
+          base: 10,
+          md: 28
+        }}
+        display="flex"
+        flexDirection="column"
+        justifyContent="start"
+        alignItems="center"
+        gap={10}
+        className="w-[390px] sm:w-[480px] md:w-[674px] lg:w-[894px] xl:w-full min-w-[390px] sm:min-w-[480px] md:min-w-[674px] lg:min-w-[894px] xl:min-w-full"
         >
-          <Heading as="h1" className="text-7xl font-bold w-full">
+          <Heading as="h1" className="text-7xl font-bold w-full ml-8 sm:ml-0">
             Skills
           </Heading>
+
+          <Flex 
+          direction="column" 
+          justify="center" 
+          align="center" 
+          gap={{
+            base: 8,
+            md: 22
+          }} 
+          w="100%" 
+          flexGrow={1}
+          >
+            <MovingCards items={skills[0]} speed="slow" />
+            <MovingCards items={skills[1]} speed="slow" />
+            <MovingCards items={skills[2]} speed="slow" />
+          </Flex>
         </Container>
 
         <Container 
@@ -265,7 +407,7 @@ export default function Home() {
         height={2000} 
         pt={16}
         >
-          <Heading as="h1" className="text-7xl font-bold w-full">
+          <Heading as="h1" className="text-7xl font-bold w-full ml-8 sm:ml-0">
             Experience
           </Heading>
         </Container>

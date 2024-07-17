@@ -5,13 +5,13 @@
 About :
 - CVs ?
 - Responsiveness
+- Make writing animation faster
 
 Education :
 *DONE*
 
 Projects/Experience :
 - Fixed scroll from aceternity
-
 
 Skills :
 - Sliders
