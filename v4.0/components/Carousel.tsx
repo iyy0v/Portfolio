@@ -1,0 +1,54 @@
+"use client";
+import React, { useState, useEffect } from 'react'
+import { ChevronLeft, ChevronRight } from "react-feather"
+
+type slidesType = React.ReactNode[]
+
+const Carousel = ({ 
+    children: slides, 
+    autoSlide = false, 
+    autoSlideInterval = 3000 
+} : {
+    children: slidesType, 
+    autoSlide?: boolean, 
+    autoSlideInterval?: number
+}) => {
+    const [curr, setCurr] = useState(0)
+
+    const prev = () => setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1))
+
+    const next = () => setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1))
+
+    useEffect(() => {
+        if (!autoSlide) return
+        const slideInterval = setInterval(next, autoSlideInterval)
+        return () => clearInterval(slideInterval)
+    }, [])
+
+
+    return (
+        <div className='overflow-hidden relative w-full md:w-[720px] max-md:mx-20'>
+            <div className='flex gap-8 min-[420px]:gap-16 md:gap-32 transition-transform ease-out duration-500 md:p-4 px-4 min-[420px]:px-8 md:px-16 my-8 aspect-video' style={{ transform: `translateX(-${curr * 100}%)` }}>
+                {slides}
+            </div>
+            <div className="absolute inset-0 flex items-center justify-between max-md:hidden">
+                <button onClick={prev} className='rounded-full shadow text-white/80 hover:text-white'>
+                    <ChevronLeft size={32}/>
+                </button>
+                <button onClick={next} className='rounded-full shadow text-white/80 hover:text-white'>
+                    <ChevronRight size={32}/>
+                </button>
+            </div>
+            <div className='absolute bottom-4 right-0 left-0'>
+                <div className='flex items-center justify-center gap-2'>
+                    {slides.map((s, i) => (
+                        <div key={i} className={`transition-all w-1.5 h-1.5 bg-white rounded-full  ${curr === i ? "p-0.5" : "bg-opacity-50"}`} />
+                    ))}
+                </div>
+            </div>
+        </div>
+
+    )
+}
+
+export default Carousel

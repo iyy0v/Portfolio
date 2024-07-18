@@ -9,8 +9,8 @@ export default function NavBar() {
         "About",
         "Education",
         "Skills",
-        "Experience",
         "Projects",
+        "Contact",
     ]
 
     const bg = useColorModeValue("gray.50", "#030310");

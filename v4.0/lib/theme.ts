@@ -1,4 +1,5 @@
 import { extendTheme, type ThemeConfig } from '@chakra-ui/react'
+import { color } from 'framer-motion'
 
 
 const config: ThemeConfig = {
@@ -45,8 +46,8 @@ const theme = extendTheme({
             error: 'red.500',
             success: 'green.500',
             primary: {
-                default: 'red.500',
-                _dark: 'red.400',
+                default: '#030310',
+                _dark: '#030310',
             },
             secondary: {
                 default: 'red.800',

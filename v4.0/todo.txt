@@ -10,11 +10,11 @@ About :
 Education :
 *DONE*
 
-Projects/Experience :
+Projects :
 - Fixed scroll from aceternity
 
 Skills :
-- Sliders
+*DONE*
 
 Contact :
 -
