@@ -1,5 +1,5 @@
 'use client';
-import { hero, skills, projects } from "@/lib/data";
+import { hero, skills, projects } from "@/utils/data";
 import { Box, Container, useColorModeValue, Text, Grid, Image, Flex, Heading, useDisclosure} from "@chakra-ui/react";
 import Head from "next/head";
 import NavBar from "../components/NavBar";

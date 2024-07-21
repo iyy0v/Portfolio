@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Providers } from "../lib/provider";
-import { fonts } from "../lib/fonts";
+import { Providers } from "../utils/provider";
+import { fonts } from "../utils/fonts";
 import { ColorModeScript } from "@chakra-ui/react";
-import theme from "../lib/theme";
+import theme from "../utils/theme";
 import { useEffect } from "react";
 export const metadata: Metadata = {
   title: "MyPortfolio",
