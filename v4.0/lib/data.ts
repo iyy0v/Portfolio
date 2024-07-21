@@ -8,34 +8,35 @@ export const hero = {
     name: [
         {
             text: "I'm",
-            className: "text-3xl md:text-4xl lg:text-6xl",
         },
         {
             text: "Ayoub NAIT MIHOUB",
-            className: "text-blue-500 dark:text-blue-500 text-3xl md:text-4xl lg:text-6xl",
+            className: "text-blue-500 dark:text-blue-500l",
         },
         {
             text: ",",
-            className: "text-3xl md:text-4xl lg:text-6xl",
         }
     ],
     title: [
         {
             text: "a",
+            className: "text-3xl md:text-4xl lg:text-6xl",
         },
         {
             text: "Software Engineer",
-            className: "text-blue-500 dark:text-blue-500",
+            className: "text-blue-500 dark:text-blue-500 text-3xl md:text-4xl lg:text-6x",
         },
         {
             text: "/",
+            className: "text-3xl md:text-4xl lg:text-6xl",
         },
         {
             text: "Web Developer",
-            className: "text-blue-500 dark:text-blue-500",
+            className: "text-blue-500 dark:text-blue-500  text-3xl md:text-4xl lg:text-6x",
         },
         {
             text: ".",
+            className: "text-3xl md:text-4xl lg:text-6xl",
         },
     ],
     description: "Passionate about creating innovative and efficient software solutions, I specialize in web development and software engineering with a focus on modern technologies and user-friendly designs."

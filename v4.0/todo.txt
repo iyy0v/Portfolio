@@ -1,5 +1,4 @@
 - Mobile nav bar
-- Mode switcher
 - Background animation?
 
 About :
@@ -11,7 +10,7 @@ Education :
 *DONE*
 
 Projects :
-- Fixed scroll from aceternity
+- Fill projects infos and screenshots.
 
 Skills :
 *DONE*

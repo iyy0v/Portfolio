@@ -11,6 +11,8 @@ import { Meteors } from "@/components/Meteors";
 import { GlareCard } from "@/components/GlareCard";
 import { MovingCards } from "@/components/MovingCards";
 import Project from "@/components/Project";
+import Contact from "./(sections)/Contact";
+import Socials from "./(sections)/Socials";
 
 export default function Home() {
   const [showDesc, setShowDesc] = useState(false);
@@ -89,8 +91,8 @@ export default function Home() {
             
             <Flex flexDirection="column">
               <TypewriterEffectSmooth words={hero.salutation} duration={1} cursorDuration={1} cursorClassName="h-14 sm:h-18 lg:h-24 xl:h-24"/>
-              <TypewriterEffectSmooth words={hero.name} delay={3} duration={2} cursorDuration={3} cursorClassName="h-10 sm:h-10 lg:h-16 xl:h-16"/>
-              <TypewriterEffectSmooth words={hero.title} delay={6} duration={3} onDone={toggleDesc} cursorClassName="h-8 sm:h-10 lg:h-14 xl:h-14"/>
+              <TypewriterEffectSmooth words={hero.name} delay={3} duration={2} cursorClassName="h-8 sm:h-10 lg:h-14 xl:h-14"/>
+              <TypewriterEffectSmooth words={hero.title} delay={6} duration={3} onDone={toggleDesc} cursorDuration={3} cursorClassName="h-10 sm:h-10 lg:h-16 xl:h-16"/>
             </Flex>
           </Grid>
           
@@ -112,7 +114,7 @@ export default function Home() {
         justifyContent="start"
         alignItems="center"
         gap={10}
-        className="w-[390px] sm:w-[480px] md:w-[674px] lg:w-[894px] xl:w-full min-w-[390px] sm:min-w-[480px] md:min-w-[674px] lg:min-w-[894px] xl:min-w-full"
+        className="w-[375px] sm:w-[480px] md:w-[674px] lg:w-[894px] xl:w-full min-w-[375px] sm:min-w-[480px] md:min-w-[674px] lg:min-w-[894px] xl:min-w-full"
         >
           <Heading as="h1" className="text-7xl font-bold w-full ml-8 sm:ml-0">
             Education
@@ -232,7 +234,7 @@ export default function Home() {
         justifyContent="start"
         alignItems="center"
         gap={10}
-        className="w-[390px] sm:w-[480px] md:w-[674px] lg:w-[894px] xl:w-full min-w-[390px] sm:min-w-[480px] md:min-w-[674px] lg:min-w-[894px] xl:min-w-full"
+        className="w-[375px] sm:w-[480px] md:w-[674px] lg:w-[894px] xl:w-full min-w-[375px] sm:min-w-[480px] md:min-w-[674px] lg:min-w-[894px] xl:min-w-full"
         >
           <Heading as="h1" className="text-7xl font-bold w-full ml-8 sm:ml-0">
             Skills & Tech Stack
@@ -269,7 +271,7 @@ export default function Home() {
         justifyContent="start"
         alignItems="center"
         gap={14}
-        className="w-[390px] sm:w-[480px] md:w-[674px] lg:w-[894px] xl:w-full min-w-[390px] sm:min-w-[480px] md:min-w-[674px] lg:min-w-[894px] xl:min-w-full"
+        className="w-[375px] sm:w-[480px] md:w-[674px] lg:w-[894px] xl:w-full min-w-[375px] sm:min-w-[480px] md:min-w-[674px] lg:min-w-[894px] xl:min-w-full"
         >
           <Heading as="h1" className="text-7xl font-bold w-full ml-8 sm:ml-0">
             Projects & Experience
@@ -285,33 +287,12 @@ export default function Home() {
               projects.map((project, index) => <Project key={index} content={project} />)
             }
           </Flex>
-
-          
         </Container>
 
-        <Container 
-        id="Contact"
-        bg="red"
-        h="auto"
-        minH="100vh"
-        px={0}
-        py={{
-          base: 10,
-          md: 28
-        }}
-        display="flex"
-        flexDirection="column"
-        justifyContent="start"
-        alignItems="center"
-        gap={10}
-        className="w-[390px] sm:w-[480px] md:w-[674px] lg:w-[894px] xl:w-full min-w-[390px] sm:min-w-[480px] md:min-w-[674px] lg:min-w-[894px] xl:min-w-full"
-        >
-          <Heading as="h1" className="text-7xl font-bold w-full">
-            Contact
-          </Heading>
-          
-        </Container>
+        <Contact />
+
       </Container>
+
     </Box>
   );
 }
