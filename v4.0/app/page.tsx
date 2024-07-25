@@ -1,4 +1,5 @@
-'use client';
+'use client'
+
 import { hero, skills, projects } from "@/utils/data";
 import { Box, Container, useColorModeValue, Text, Grid, Image, Flex, Heading, useDisclosure} from "@chakra-ui/react";
 import Head from "next/head";
@@ -12,7 +13,6 @@ import { GlareCard } from "@/components/GlareCard";
 import { MovingCards } from "@/components/MovingCards";
 import Project from "@/components/Project";
 import Contact from "./(sections)/Contact";
-import Socials from "./(sections)/Socials";
 
 export default function Home() {
   const [showDesc, setShowDesc] = useState(false);
@@ -57,14 +57,22 @@ export default function Home() {
         h="auto"
         minH="100vh"
         py={24}
+        
+        px={{
+          base: 4,
+          sm: 0
+        }}
         display="flex"
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        gap={10}
+        gap={{
+          base: 5,
+          sm: 10
+        }}
         overflow="visible"
+        className="w-[375px] sm:w-[480px] md:w-[674px] lg:w-[894px] xl:w-full min-w-[375px] sm:min-w-[480px] md:min-w-[674px] lg:min-w-[894px] xl:min-w-full max-w-[100vw]"
         >
-
           <Grid 
           templateColumns={{
             base: "1fr",
@@ -78,10 +86,10 @@ export default function Home() {
           }}
           gap={{
             base: 5,
-            xl:10
+            sm: 10
           }}
           >
-            <CardContainer className="w-fit ">
+            <CardContainer className="w-fit">
               <CardBody className="bg-blue-500 rounded-md w-60 h-60 lg:w-80 lg:h-80 group/card dark:hover:shadow-2xl dark:hover:shadow-indigo -500/[0.4]">
                 <CardItem translateZ="100" >
                   <Image src="./me.png" alt="Ayoub NAIT MIHOUB" rounded={10} width={320}/>
@@ -90,13 +98,16 @@ export default function Home() {
             </CardContainer>
             
             <Flex flexDirection="column">
-              <TypewriterEffectSmooth words={hero.salutation} duration={1} cursorDuration={1} cursorClassName="h-14 sm:h-18 lg:h-24 xl:h-24"/>
+              <TypewriterEffectSmooth words={[{
+            text: "Hello there 👋", 
+            className: "text-xl sm:text-3xl md:text-4xl lg:text-5xl"
+        }]} duration={1} cursorDuration={1} cursorClassName="h-14 sm:h-18 lg:h-24 xl:h-24"/>
               <TypewriterEffectSmooth words={hero.name} delay={3} duration={2} cursorClassName="h-8 sm:h-10 lg:h-14 xl:h-14"/>
               <TypewriterEffectSmooth words={hero.title} delay={6} duration={3} onDone={toggleDesc} cursorDuration={3} cursorClassName="h-10 sm:h-10 lg:h-16 xl:h-16"/>
             </Flex>
           </Grid>
           
-          {showDesc ? <TextGenerateEffect words={hero.description} duration={1} delay={0.05} className="w-[452px] sm:w-[562px] md:w-[674px] lg:w-[894px] xl:w-full" />  : <div className="h-32"></div>}
+          {showDesc ? <TextGenerateEffect words={hero.description} duration={1} delay={0.05} className="w-[343px] sm:w-[540px] md:w-[674px] lg:w-[894px] xl:w-full max-w-[calc(100vw - 32px]" />  : <div className="h-32"></div>}
 
         </Container>
 
@@ -122,12 +133,12 @@ export default function Home() {
 
           <Flex 
           direction="column" 
-          justify="center" 
-          align="center" 
+          justify="center"
+          align="center"
           gap={{
             base: 10,
             md: 28
-          }} 
+          }}
           w="100%" 
           flexGrow={1}
           >

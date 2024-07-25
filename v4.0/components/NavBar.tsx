@@ -1,3 +1,5 @@
+'use client'
+
 import { chakra, Container, Flex, Grid, Text } from "@chakra-ui/react";
 import {useColorModeValue}  from "@chakra-ui/react"; 
 import NextLink from 'next/link'

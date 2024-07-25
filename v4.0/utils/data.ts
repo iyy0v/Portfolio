@@ -1,42 +1,44 @@
 export const hero = {
     salutation: [
         {
-            text: "Hi there !", 
-            className: "text-5xl md:text-6xl lg:text-8xl"
+            text: "Hello there 👋", 
+            className: "text-xl sm:text-3xl md:text-4xl lg:text-5xl"
         }
     ],
     name: [
         {
-            text: "I'm",
+            text: "I'm ",
+            className: "text-2xl sm:text-3xl md:text-5xl lg:text-7xl"
         },
         {
             text: "Ayoub NAIT MIHOUB",
-            className: "text-blue-500 dark:text-blue-500l",
+            className: "text-blue-500 dark:text-blue-500 text-2xl sm:text-3xl md:text-5xl lg:text-7xl",
         },
         {
             text: ",",
+            className: "text-2xl sm:text-3xl md:text-5xl lg:text-7xl"
         }
     ],
     title: [
         {
-            text: "a",
-            className: "text-3xl md:text-4xl lg:text-6xl",
+            text: "a ",
+            className: "text-lg sm:text-3xl md:text-4xl lg:text-5xl"
         },
         {
             text: "Software Engineer",
-            className: "text-blue-500 dark:text-blue-500 text-3xl md:text-4xl lg:text-6x",
+            className: "text-blue-500 dark:text-blue-500 text-lg sm:text-3xl md:text-4xl lg:text-5xl",
         },
         {
             text: "/",
-            className: "text-3xl md:text-4xl lg:text-6xl",
+            className: "text-lg sm:text-3xl md:text-4xl lg:text-5xl",
         },
         {
             text: "Web Developer",
-            className: "text-blue-500 dark:text-blue-500  text-3xl md:text-4xl lg:text-6x",
+            className: "text-blue-500 dark:text-blue-500 text-lg sm:text-3xl md:text-4xl lg:text-5xl",
         },
         {
             text: ".",
-            className: "text-3xl md:text-4xl lg:text-6xl",
+            className: "text-lg sm:text-3xl md:text-4xl lg:text-5xl",
         },
     ],
     description: "Passionate about creating innovative and efficient software solutions, I specialize in web development and software engineering with a focus on modern technologies and user-friendly designs."

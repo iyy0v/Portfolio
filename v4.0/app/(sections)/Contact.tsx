@@ -93,7 +93,7 @@ export default function Contact() {
             justify="start"
             align={{
                 base: "center",
-                xl: "start"
+                xl: "start" 
             }}
             w="100%"
             gap={16}
@@ -111,7 +111,7 @@ export default function Contact() {
                 validationSchema={toFormikValidationSchema(validationSchema)}
                 onSubmit={handleSubmit}
                 >
-                    <Form className="w-full">
+                    <Form className="w-full flex justify-center items-center">
                         <Grid
                         templateColumns={"1fr 1fr"}
                         gap={6} 
