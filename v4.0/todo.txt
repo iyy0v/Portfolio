@@ -1,10 +1,7 @@
 - Mobile nav bar
-- Background animation?
 
 About :
 - CVs ?
-- Responsiveness
-- Make writing animation faster
 
 Education :
 *DONE*

@@ -14,17 +14,17 @@ body {
   overflow-x: hidden;
 }
 
-a {
+.nav {
   position: relative;
   color: #fff;
   text-decoration: none;
 }
 
-a:hover {
+.nav:hover {
   color: #fff;
 }
 
-a::before {
+.nav::before {
   content: "";
   position: absolute;
   display: block;
@@ -37,8 +37,13 @@ a::before {
   transition: transform 0.3s ease;
 }
 
-a:hover::before {
+.nav:hover::before {
   transform: scaleX(1);
+}
+
+.active > p{
+  z-index: 1000;
+  position: relative;
 }
 
 .active::before {
@@ -52,6 +57,11 @@ a:hover::before {
   background-color: rgb(59 130 246);
   transform: scaleX(1);
   transition: transform 0.3s ease;
+  z-index: 900;
+}
+
+.mobileActive {
+  color: rgb(59 130 246);
 }
 
 

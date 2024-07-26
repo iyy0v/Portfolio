@@ -1,6 +1,5 @@
 'use client'
 
-import { hero, skills, projects } from "@/utils/data";
 import { Box, Container, useColorModeValue, Text, Grid, Image, Flex, Heading, useDisclosure} from "@chakra-ui/react";
 import Head from "next/head";
 import NavBar from "../components/NavBar";
@@ -14,10 +13,25 @@ import { MovingCards } from "@/components/MovingCards";
 import Project from "@/components/Project";
 import Contact from "./(sections)/Contact";
 
+
 export default function Home() {
+  const [showName, setShowName] = useState(false);
+  const [showTitle, setShowTitle] = useState(false);
   const [showDesc, setShowDesc] = useState(false);
   const bg = useColorModeValue("gray.50", "#030310");
   const color = useColorModeValue("#030310", "gray.50");
+
+  const toggleName = () => {
+    setTimeout(() => {
+      setShowName(true)
+    }, 900);
+  }
+
+  const toggleTitle= () => {
+    setTimeout(() => {
+      setShowTitle(true)
+    }, 1000);
+  }
 
   const toggleDesc = () => {
     setTimeout(() => {
@@ -42,7 +56,6 @@ export default function Home() {
         <meta name="description" content="Ayoub's portfolio" />  
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Meteors number={40} />
       <NavBar />
 
       <Container 
@@ -90,7 +103,7 @@ export default function Home() {
           }}
           >
             <CardContainer className="w-fit">
-              <CardBody className="bg-blue-500 rounded-md w-60 h-60 lg:w-80 lg:h-80 group/card dark:hover:shadow-2xl dark:hover:shadow-indigo -500/[0.4]">
+              <CardBody className="bg-blue-500 rounded-md w-60 h-60 lg:w-80 lg:h-80 group/card dark:hover:shadow-2xl dark:hover:shadow-indigo-500/[0.4]">
                 <CardItem translateZ="100" >
                   <Image src="./me.png" alt="Ayoub NAIT MIHOUB" rounded={10} width={320}/>
                 </CardItem>
@@ -98,16 +111,13 @@ export default function Home() {
             </CardContainer>
             
             <Flex flexDirection="column">
-              <TypewriterEffectSmooth words={[{
-            text: "Hello there 👋", 
-            className: "text-xl sm:text-3xl md:text-4xl lg:text-5xl"
-        }]} duration={1} cursorDuration={1} cursorClassName="h-14 sm:h-18 lg:h-24 xl:h-24"/>
-              <TypewriterEffectSmooth words={hero.name} delay={3} duration={2} cursorClassName="h-8 sm:h-10 lg:h-14 xl:h-14"/>
-              <TypewriterEffectSmooth words={hero.title} delay={6} duration={3} onDone={toggleDesc} cursorDuration={3} cursorClassName="h-10 sm:h-10 lg:h-16 xl:h-16"/>
+              <TypewriterEffectSmooth words={hero.salutation} duration={0.5} cursorDuration={0.5} onDone={toggleName} cursorClassName="h-7 sm:h-10 md:h-12 lg:h-14 xl:h-14"/>
+              {showName ? <TypewriterEffectSmooth words={hero.name} duration={1.5} cursorDuration={1.3} onDone={toggleTitle} cursorClassName="h-9 sm:h-10 md:h-14 lg:h-24 xl:h-24"/> : <div className="h-9 sm:h-10 md:h-14 lg:h-22 xl:h-22"></div>}
+              {showTitle ? <TypewriterEffectSmooth words={hero.title} duration={1.5} onDone={toggleDesc} cursorClassName="h-7 sm:h-10 md:h-12 lg:h-16 xl:h-16"/> : <div className="h-7 sm:h-10 md:h-12 lg:h-16 xl:h-16"></div>}
             </Flex>
           </Grid>
           
-          {showDesc ? <TextGenerateEffect words={hero.description} duration={1} delay={0.05} className="w-[343px] sm:w-[540px] md:w-[674px] lg:w-[894px] xl:w-full max-w-[calc(100vw - 32px]" />  : <div className="h-32"></div>}
+          {showDesc ? <TextGenerateEffect words={hero.description} duration={1} delay={0.05} className="w-[363px] sm:w-[584px] md:w-[700px] lg:w-[914px] xl:w-full max-w-[calc(100vw - 32px]" />  : <div className="h-32"></div>}
 
         </Container>
 
@@ -142,7 +152,7 @@ export default function Home() {
           w="100%" 
           flexGrow={1}
           >
-            <GlareCard>
+            <GlareCard className="w-full">
               <Grid
               templateColumns={{
                 base: "1fr",
@@ -307,3 +317,184 @@ export default function Home() {
     </Box>
   );
 }
+
+const hero = {
+  salutation: [
+      {
+          text: "Hello there 👋", 
+          className: "text-xl sm:text-3xl md:text-4xl lg:text-5xl"
+      }
+  ],
+  name: [
+      {
+          text: "I'm ",
+          className: "text-2xl sm:text-3xl md:text-5xl lg:text-7xl"
+      },
+      {
+          text: "Ayoub NAIT MIHOUB",
+          className: "text-blue-500 dark:text-blue-500 text-2xl sm:text-3xl md:text-5xl lg:text-7xl",
+      },
+      {
+          text: ",",
+          className: "text-2xl sm:text-3xl md:text-5xl lg:text-7xl"
+      }
+  ],
+  title: [
+      {
+          text: "a ",
+          className: "text-lg sm:text-3xl md:text-4xl lg:text-5xl"
+      },
+      {
+          text: "Software Engineer",
+          className: "text-blue-500 dark:text-blue-500 text-lg sm:text-3xl md:text-4xl lg:text-5xl",
+      },
+      {
+          text: "/",
+          className: "text-lg sm:text-3xl md:text-4xl lg:text-5xl",
+      },
+      {
+          text: "Web Developer",
+          className: "text-blue-500 dark:text-blue-500 text-lg sm:text-3xl md:text-4xl lg:text-5xl",
+      },
+      {
+          text: "👨‍💻",
+          className: "text-lg sm:text-3xl md:text-4xl lg:text-5xl",
+      },
+  ],
+  description: "Passionate about creating innovative and efficient software solutions, I specialize in web development and software engineering with a focus on modern technologies and user-friendly designs."
+}
+
+const skills = [
+  [
+      {
+          url: "./html.svg",
+          name: "HTML",
+      },
+      {
+          url: "./css.svg",
+          name: "CSS",
+      },
+      {
+          url: "./javascript.svg",
+          name: "JavaScript",
+      },
+      {
+          url: "./typescript.svg",
+          name: "TypeScript",
+      },
+      {
+          url: "./python.svg",
+          name: "python",
+      },
+      {
+          url: "./java.svg",
+          name: "Java",
+      },
+      {
+          url: "./c.svg",
+          name: "C",
+      },
+      {
+          url: "./php.svg",
+          name: "PHP",
+      },
+  ],
+  [
+      {
+          url: "./tailwindcss.svg",
+          name: "TailwindCSS",
+      },
+      {
+          url: "./sass.svg",
+          name: "Sass",
+      },
+      {
+          url: "./React.svg",
+          name: "React",
+      },
+      {
+          url: "./nextjs.svg",
+          name: "NextJS",
+      },
+      {
+          url: "./redux.svg",
+          name: "Redux",
+      },
+      {
+          url: "/reactQuery.png",
+          name: "React Query",
+      },
+      {
+          url: "./bootstrap.svg",
+          name: "Bootstrap",
+      },
+      {
+          url: "./mui.svg",
+          name: "MaterialUI",
+      },
+      
+      {
+          url: "./keystonejs.svg",
+          name: "KeystoneJS",
+      },
+      {
+          url: "./django.svg",
+          name: "Django",
+      },
+  ],
+  [
+      {
+          url: "./nodejs.svg",
+          name: "NodeJS",
+      },
+      {
+          url: "./git.svg",
+          name: "Git",
+      },
+      {
+          url: "./graphql.svg",
+          name: "GraphQL",
+      },
+      {
+          url: "./mysql.svg",
+          name: "MySQL",
+      },
+      {
+          url: "./postgresql.svg",
+          name: "PostgreSQL",
+      },
+      {
+          url: "./oracle.svg",
+          name: "Oracle",
+      },
+      {
+          url: "./figma.svg",
+          name: "Figma"
+      },
+      {
+          url: "./bash.svg",
+          name: "Bash"
+      }
+  ]
+]
+
+const projects = [
+  {
+    title: "Mail Tracking & Management",
+    description: "Developed a Progressive Web Application to optimize and modernize Air Algérie&apos;s mail management process, enhancing efficiency and ensuring document traceability. The application features a user-friendly interface for visualizing, adding, modifying, and deleting incoming and outgoing mails, supports OCR for mail digitization and Gemini AI for content auto-correction, and facilitates document sharing and collaboration. It includes mail searching/filtering, automatic alerts for response deadlines and other notifications, multilingual support, mobile adaptability and offline disponibility.",
+    stack: "TypeScript, React, Redux, React-Query, Next.js, HTML, TailwindCSS, Python, Nginx, Django, PostgreSQL, GraphQL, Firebase Cloud Messaging, Gemini API, Tesseract",
+    imageUrl: "/projects/home.png",
+  },
+  {
+    title: "Lolyzer - Stats & Analytics",
+    description: "Developed a Progressive Web Application to optimize and modernize Air Algérie&apos;s mail management process, enhancing efficiency and ensuring document traceability. The application features a user-friendly interface for visualizing, adding, modifying, and deleting incoming and outgoing mails, supports OCR for mail digitization and Gemini AI for content auto-correction, and facilitates document sharing and collaboration. It includes mail searching/filtering, automatic alerts for response deadlines and other notifications, multilingual support, mobile adaptability and offline disponibility.",
+    stack: "HTML/CSS, JavaScript, React, TailwindCSS, Chart.JS, REST API",
+    imageUrl: "/projects/home.png",
+  },
+  {
+    title: "E-tourism plateform (Front-end)",
+    description: "Developed a Progressive Web Application to optimize and modernize Air Algérie&apos;s mail management process, enhancing efficiency and ensuring document traceability. The application features a user-friendly interface for visualizing, adding, modifying, and deleting incoming and outgoing mails, supports OCR for mail digitization and Gemini AI for content auto-correction, and facilitates document sharing and collaboration. It includes mail searching/filtering, automatic alerts for response deadlines and other notifications, multilingual support, mobile adaptability and offline disponibility.",
+    stack: "HTML/CSS, Sass, JavaScript, React, Bootstrap, REST API",
+    imageUrl: "/projects/home.png",
+  },
+]
