@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 import { validationSchema } from "@/utils/validations";
+import sendEmail from "@/utils/email";
 import Socials from "./Socials";
 import { Button, Container, Flex, FormControl, FormLabel, Grid, GridItem, Text } from "@chakra-ui/react";
 import { useToast } from '@chakra-ui/react'
@@ -32,12 +33,11 @@ export default function Contact() {
     ) => {
         try {
             setLoading(true)
-            await fetch("/api/contact", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(values),
+            await sendEmail({
+                name: values.name,
+                email: values.email,
+                subject: values.subject,
+                message: values.message
             }).then((res) => {
                 toast({
                     title: 'Your message was sent.',
