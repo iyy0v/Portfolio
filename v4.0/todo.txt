@@ -1,13 +1,12 @@
-- Mobile nav bar
 
 About :
-- CVs ?
+*DONE*
 
 Education :
 *DONE*
 
 Projects :
-- Fill projects infos and screenshots.
+*DONE*
 
 Skills :
 *DONE*

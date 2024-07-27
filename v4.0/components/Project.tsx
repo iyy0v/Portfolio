@@ -11,7 +11,7 @@ export default function Project({
         title: string;
         description: string;
         stack: string;
-        imageUrl: string;
+        images: string[];
         linkUrl?: string;
     };
 }) {
@@ -27,7 +27,7 @@ export default function Project({
                 onOpen()
             }}
             >
-                <DirectionAwareHover imageUrl={content.imageUrl}>
+                <DirectionAwareHover imageUrl={content.images[0]}>
                     <p className="font-bold text-xl">{content.title}</p>
                 </DirectionAwareHover>
             </Button>
@@ -65,15 +65,15 @@ export default function Project({
                         }}
                         >
                             <Container minW="full" display="flex" flexDir="column" gap={4}>
-                                <Text w="w-full" className="text-justify">{content.description}</Text>
+                                <Text w="w-full" className="text-justify whitespace-pre-wrap">{content.description}</Text>
                                 <Divider className="bg-white"/>
                                 <Text w="full" className="text-gray-400 text-justify">{content.stack}</Text>
                             </Container>
                             <Carousel autoSlide={true}>
-                                <Image src={content.imageUrl} alt="Mail Management/Tracker" width={720} height={405} maxH="100%" rounded={5} className="inset-0 w-full object-cover" />
-                                <Image src={content.imageUrl} alt="Mail Management/Tracker" width={720} height={405} maxH="100%" rounded={5} className="inset-0 w-full object-cover" />
+                                {content.images.map((image, index) => (
+                                    <Image key={index} src={image} alt={content.title} width={720} height={405} className="inset-0 min-w-full object-contain" unoptimized={true} />
+                                ))}
                             </Carousel>
-                            
                         </Flex>
                     </ModalBody>
                 </ModalContent>
