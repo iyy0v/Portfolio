@@ -4,10 +4,9 @@ import { Providers } from "../utils/provider";
 import { fonts } from "../utils/fonts";
 import { ColorModeScript } from "@chakra-ui/react";
 import theme from "../utils/theme";
-import { useEffect } from "react";
 export const metadata: Metadata = {
-  title: "MyPortfolio",
-  description: "Ayoub's portfolio",
+  title: "Ayoub - Portfolio",
+  description: "Ayoub's portfolio showcasing his projects and skills.",
 };
 
 export default function RootLayout({
@@ -22,6 +21,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="description" content={metadata.description?.toString()} />
         <title>{metadata.title?.toString()}</title>
+        <link rel="shortcut icon" href="/icon.ico" />
       </head>
       <body className={fonts.rubik.variable}>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
