@@ -2,7 +2,7 @@
  
 import { cn } from "@/utils/cn";
 import React, { useEffect, useState } from "react";
-import { Image } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/next-js";
  
 export const MovingCards = ({
   items,

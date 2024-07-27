@@ -60,14 +60,14 @@ body {
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: #3b82f6;
+  background-color: rgb(59 130 246);
   transform: scaleX(1);
   transition: transform 0.3s ease;
   z-index: 900;
 }
 
 .mobileActive {
-  color: #3b82f6;
+  color: rgb(59 130 246);
 }
 
 

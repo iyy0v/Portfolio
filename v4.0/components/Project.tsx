@@ -1,10 +1,8 @@
-'use client'
-
+"use client";
+import { ModalOverlay, Button, Modal, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Divider, useDisclosure, Flex, Container, Text } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/next-js";
 import { DirectionAwareHover } from "./HoverCard";
 import Carousel from "./Carousel";
-import { ModalOverlay, Button, Modal, ModalContent, ModalHeader, ModalCloseButton, ModalBody, Divider, useDisclosure, Flex, Container, Text } from "@chakra-ui/react";
-import { Image, Link } from "@chakra-ui/next-js";
-import { FaGithub } from "react-icons/fa";
 
 export default function Project({
     content,
@@ -51,16 +49,8 @@ export default function Project({
                     fontSize={{
                         base: 16,
                         sm:24
-                    }}
-                    display="flex"
-                    justifyContent="space-between"
-                    alignItems="center"
-                    >
-                        {content.title} 
-                        {content.linkUrl && 
-                        <Link href={content.linkUrl} isExternal className="inline-block align-middle ml-4">
-                            <FaGithub size={32} className="hover:text-blue-500 cursor-pointer transition-all"/>
-                        </Link>}
+                    }}>
+                        {content.title}
                     </ModalHeader>
                     <ModalCloseButton />
 

@@ -1,11 +1,9 @@
-'use client'
-
+import { Button, Container, Divider, Flex, FormControl, FormErrorMessage, FormLabel, Grid, GridItem, Heading, Highlight, Input, Spinner, Text, Textarea } from "@chakra-ui/react";
+import Socials from "./Socials";
 import { useState } from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 import { validationSchema } from "@/utils/validations";
-import Socials from "./Socials";
-import { Button, Container, Flex, FormControl, FormLabel, Grid, GridItem, Text } from "@chakra-ui/react";
 import { useToast } from '@chakra-ui/react'
 
 type ContactProps = {
