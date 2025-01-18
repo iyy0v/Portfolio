@@ -1,9 +1,8 @@
 import { extendTheme, type ThemeConfig } from '@chakra-ui/react'
-import { color } from 'framer-motion'
 
 
 const config: ThemeConfig = {
-  initialColorMode: 'system',
+  initialColorMode: 'dark',
   useSystemColorMode: false, 
 }
 

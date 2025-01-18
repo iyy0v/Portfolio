@@ -1,3 +1,5 @@
+'use client';
+
 import Project from "@/components/Project";
 import { Container, Flex, Heading } from "@chakra-ui/react";
 

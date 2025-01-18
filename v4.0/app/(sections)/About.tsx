@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CardBody, CardContainer, CardItem } from "@/components/3D-Card"
 import { TextGenerateEffect } from "@/components/TextGenerateEffect"
 import { TypewriterEffectSmooth } from "@/components/TypewriterEffect"
@@ -12,23 +12,33 @@ export default function About() {
     const [showName, setShowName] = useState(false);
     const [showTitle, setShowTitle] = useState(false);
     const [showDesc, setShowDesc] = useState(false);
+    const [isHydrated, setIsHydrated] = useState(false);
+
+    useEffect(() => {
+        // Ensure client-side rendering
+        setIsHydrated(true);
+    }, []);
+
+    if (!isHydrated) {
+        return null; // Render nothing until hydrated
+    }
 
     const toggleName = () => {
-        setTimeout(() => {
+      setTimeout(() => {
         setShowName(true)
-        }, 900);
+      }, 900);
     }
 
     const toggleTitle= () => {
-        setTimeout(() => {
+      setTimeout(() => {
         setShowTitle(true)
-        }, 1000);
+      }, 1000);
     }
 
     const toggleDesc = () => {
-        setTimeout(() => {
+      setTimeout(() => {
         setShowDesc(true)
-        }, 1000);
+      }, 1000);
     }
 
     return (

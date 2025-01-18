@@ -24,8 +24,10 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/icon.ico" />
       </head>
       <body className={fonts.rubik.variable}>
-        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-        <Providers>{children}</Providers>
+        <Providers>
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+          {children}
+        </Providers>
       </body>
     </html>
   );

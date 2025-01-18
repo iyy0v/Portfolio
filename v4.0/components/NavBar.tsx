@@ -58,7 +58,7 @@ export default function NavBar() {
                         {links.map((link) => {
                             return (
                                 <Link key={link} activeClass={"mobileActive"} to={link} spy={true} smooth={true} duration={1000}>
-                                    <MenuItem as="a" bg={bg} cursor='pointer' className="hover:bg-white/10">{link}</MenuItem>
+                                    <MenuItem bg={bg} cursor='pointer' className="hover:bg-white/10">{link}</MenuItem>
                                 </Link>
                             )
                         })}

@@ -1,3 +1,5 @@
+'use client';
+
 import { GlareCard } from "@/components/GlareCard";
 import { Container, Flex, Grid, Heading, Text, Image } from "@chakra-ui/react";
 

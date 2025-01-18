@@ -1,3 +1,5 @@
+'use client';
+
 import { MovingCards } from "@/components/MovingCards";
 import { Container, Flex, Heading } from "@chakra-ui/react";
 
@@ -92,7 +94,7 @@ const skills = [
             name: "Sass",
         },
         {
-            url: "./skills/React.svg",
+            url: "./skills/react.svg",
             name: "React",
         },
         {

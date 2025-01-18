@@ -1,3 +1,5 @@
+'use client';
+
 import { Link } from "@chakra-ui/next-js";
 import { Container, Divider, Flex, IconButton } from "@chakra-ui/react";
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";

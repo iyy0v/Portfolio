@@ -8,12 +8,19 @@ import About from "./(sections)/About";
 import Education from "./(sections)/Education";
 import Skills from "./(sections)/Skills";
 import Projects from "./(sections)/Projects";
-import { Box, Container, useColorModeValue } from "@chakra-ui/react";
+import { Box, Container, useColorModeValue, theme, useColorMode } from "@chakra-ui/react";
+
 
 
 export default function Home() {
   const bg = useColorModeValue("gray.50", "#030310");
   const color = useColorModeValue("#030310", "gray.50");
+
+  const { setColorMode } = useColorMode();
+
+  useEffect(() => {
+    setColorMode("dark");
+  }, []);
 
   useEffect(() => {
     window.onbeforeunload = function () {
